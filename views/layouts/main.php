@@ -1,0 +1,70 @@
+<?php
+/* @var $this \yii\web\View */
+/* @var $content string */
+use yii\helpers\Url;
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use humhub\modules\search\models\forms\SearchForm;
+use humhub\modules\content\components\ContentActiveRecord;
+use humhub\modules\content\components\ContentContainerActiveRecord;
+\humhub\assets\AppAsset::register($this);
+?>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+    <head>
+        <title><?php echo $this->pageTitle; ?></title>
+        <meta charset="<?= Yii::$app->charset ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+        <?php $this->head() ?>
+        <?= $this->render('head'); ?>
+    </head>
+    <body>
+        <?php $this->beginBody() ?>
+
+        <!-- start: first top navigation bar -->
+        <div id="topbar-first" class="topbar">
+            <div class="container">
+                <div class="topbar-brand hidden-xs">
+                    <?php echo \humhub\widgets\SiteLogo::widget(); ?>
+                </div>
+
+                <div class="topbar-actions pull-right">
+                    <?php echo \humhub\modules\user\widgets\AccountTopMenu::widget(); ?>
+                </div>
+
+                <div class="notifications pull-right">
+                    <?php
+                    echo \humhub\widgets\NotificationArea::widget(['widgets' => [
+                            [\humhub\modules\notification\widgets\Overview::className(), [], ['sortOrder' => 10]],
+                    ]]);
+                    ?>
+                </div>
+            </div>
+        </div>
+        <!-- end: first top navigation bar -->
+
+        <!-- start: second top navigation bar -->
+        <div id="topbar-second" class="topbar">
+            <div class="container">
+                <ul class="nav" id="top-menu-nav">
+                    <!-- load space chooser widget -->
+                    <?php echo \humhub\modules\space\widgets\Chooser::widget(); ?>
+
+                    <!-- load navigation from widget -->
+                    <?php echo \humhub\widgets\TopMenu::widget(); ?>
+                </ul>
+            </div>
+        </div>
+        <!-- end: second top navigation bar -->
+
+          <!--  <div class="nav col-md-12" id="search-menu-nav">
+                <?php /*echo \humhub\widgets\TopMenuRightStack::widget(); */?>
+            </div>-->
+
+        <?= $content; ?>
+
+        <?php $this->endBody() ?>
+    </body>
+</html>
+<?php $this->endPage() ?>
