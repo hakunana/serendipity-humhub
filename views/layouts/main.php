@@ -1,12 +1,6 @@
 <?php
 /* @var $this \yii\web\View */
 /* @var $content string */
-use yii\helpers\Url;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use humhub\modules\search\models\forms\SearchForm;
-use humhub\modules\content\components\ContentActiveRecord;
-use humhub\modules\content\components\ContentContainerActiveRecord;
 \humhub\assets\AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -58,7 +52,7 @@ use humhub\modules\content\components\ContentContainerActiveRecord;
         </div>
         <!-- end: second top navigation bar -->
 
-          <!--  <div class="nav col-md-12" id="search-menu-nav">
+<!--            <div class="nav col-md-12" id="search-menu-nav">
                 <?php /*echo \humhub\widgets\TopMenuRightStack::widget(); */?>
             </div>-->
 

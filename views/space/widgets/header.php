@@ -153,70 +153,79 @@ if ($space->isAdmin()) {
 
         </div>
 
-
     </div>
 
-    <div class="panel-body">
+    <div class="controls controls-header pull-right">
+        <!-- Start: Add new space menu as dropdown in header -->
+        <?php
+        echo \humhub\modules\space\widgets\Menu::widget(['space' => $space,
+            'template' => '@humhub/widgets/views/dropdownNavigation']);
+        ?>
+        <!-- End: Add new space menu as dropdown in header -->
+        <?php
+        echo humhub\modules\space\widgets\HeaderControls::widget(['widgets' => [
+            [\humhub\modules\space\widgets\InviteButton::className(), ['space' => $space], ['sortOrder' => 10]],
+            [\humhub\modules\space\widgets\MembershipButton::className(), ['space' => $space], ['sortOrder' => 20]],
+            [\humhub\modules\space\widgets\FollowButton::className(), [
+                'space' => $space,
+                'followOptions' => ['class' => 'btn btn-primary'],
+                'unfollowOptions' => ['class' => 'btn btn-info']],
+                ['sortOrder' => 30]]
+        ]]);
+        ?>
+        <?=
+        humhub\modules\space\widgets\HeaderControlsMenu::widget([
+            'space' => $space,
+            'template' => '@humhub/widgets/views/dropdownNavigation'
+        ]);
+        ?>
+    </div>
+
+    <div class="row"></div>
+
+    <!-- START: Comment out panel body with user stats , not used in space header in this theme -->
+
+<!--    <div class="panel-body">
 
         <div class="panel-profile-controls">
-            <!-- start: User statistics -->
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="statistics pull-left">
 
                         <div class="pull-left entry">
-                            <span class="count"><?php echo $postCount; ?></span></a>
+                            <span class="count"><?php /*echo $postCount; */?></span></a>
                             <br>
                             <span
-                                class="title"><?php echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Posts'); ?></span>
+                                class="title"><?php /*echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Posts'); */?></span>
                         </div>
 
-                        <a href="<?= $space->createUrl('/space/membership/members-list'); ?>" data-target="#globalModal">
+                        <a href="<?/*= $space->createUrl('/space/membership/members-list'); */?>" data-target="#globalModal">
                             <div class="pull-left entry">
-                                <span class="count"><?php echo $space->getMemberships()->count(); ?></span>
+                                <span class="count"><?php /*echo $space->getMemberships()->count(); */?></span>
                                 <br>
                                 <span
-                                    class="title"><?php echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Members'); ?></span>
+                                    class="title"><?php /*echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Members'); */?></span>
                             </div>
                         </a>
 
-                        <a href="<?= $space->createUrl('/space/space/follower-list'); ?>" data-target="#globalModal">
+                        <a href="<?/*= $space->createUrl('/space/space/follower-list'); */?>" data-target="#globalModal">
                             <div class="pull-left entry">
-                                <span class="count"><?php echo $space->getFollowerCount(); ?></span><br>
+                                <span class="count"><?php /*echo $space->getFollowerCount(); */?></span><br>
                                 <span
-                                    class="title"><?php echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Followers'); ?></span>
+                                    class="title"><?php /*echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Followers'); */?></span>
                             </div>
                         </a>
 
                     </div>
-                    <!-- end: User statistics -->
 
-                    <div class="controls controls-header pull-right">
-                        <?php
-                        echo humhub\modules\space\widgets\HeaderControls::widget(['widgets' => [
-                                [\humhub\modules\space\widgets\InviteButton::className(), ['space' => $space], ['sortOrder' => 10]],
-                                [\humhub\modules\space\widgets\MembershipButton::className(), ['space' => $space], ['sortOrder' => 20]],
-                                [\humhub\modules\space\widgets\FollowButton::className(), [
-                                        'space' => $space,
-                                        'followOptions' => ['class' => 'btn btn-primary'],
-                                        'unfollowOptions' => ['class' => 'btn btn-info']],
-                                    ['sortOrder' => 30]]
-                        ]]);
-                        ?>
-                        <?=
-                        humhub\modules\space\widgets\HeaderControlsMenu::widget([
-                            'space' => $space,
-                            'template' => '@humhub/widgets/views/dropdownNavigation'
-                        ]);
-                        ?>
-                    </div>
                 </div>
             </div>
 
         </div>
 
-
-    </div>
+    </div>-->
+    <!-- END: Comment out panel body with user stats , not used in space header in this theme -->
 
 </div>
 
