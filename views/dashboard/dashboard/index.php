@@ -6,7 +6,6 @@
 use humhub\libs\Html;
 use yii\helpers\Url;
 ?>
-
 <div class="container">
     <!-- START: new search form-->
 
@@ -23,7 +22,7 @@ use yii\helpers\Url;
 
     <!-- END: new search form-->
     <div class="row">
-        <div class="col-md-12 layout-content-container">
+        <div class="grid col-md-12 layout-content-container" data-masonry='{ "itemSelector": ".grid-item"}'>
             <?= \humhub\modules\dashboard\widgets\DashboardContent::widget([
                 'contentContainer' => $contentContainer,
                 'showProfilePostForm' => $showProfilePostForm

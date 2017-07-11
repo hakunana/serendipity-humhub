@@ -6,6 +6,7 @@
 
 $space = $this->context->contentContainer;
 ?>
+
 <div class="container space-layout-container">
     <div class="row">
         <div class="col-md-12">
@@ -24,7 +25,7 @@ $space = $this->context->contentContainer;
         <!-- START remove space menu - to be added in space header and index / index_guest-->
 
         <!-- START new full-size content widget-->
-        <div class="col-md-12 layout-content-container">
+        <div class="grid col-md-12 layout-content-container" data-masonry='{ "itemSelector": ".grid-item"}'>
             <?= \humhub\modules\space\widgets\SpaceContent::widget([
                 'contentContainer' => $space,
                 'content' => $content
