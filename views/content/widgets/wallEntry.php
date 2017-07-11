@@ -8,8 +8,9 @@ use humhub\modules\content\components\ContentContainerController;
 $user = $object->content->createdBy;
 $container = $object->content->container;
 ?>
-<div class="col-md-4 row">
-<div class="col-md-11 panel panel-default wall_<?php echo $object->getUniqueId(); ?>">
+
+<!-- Next line added col-md-4 so it is a 1-3 grid-->
+<div class="col-md-4 panel panel-default wall_<?php echo $object->getUniqueId(); ?>">
     <div class="panel-body">
 
         <div class="media">
@@ -98,6 +99,4 @@ $container = $object->content->container;
             </div>
         </div>
     </div>
-</div>
-    <div class="col-md-1"/>
 </div>
