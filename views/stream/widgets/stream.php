@@ -63,12 +63,12 @@ $this->registerJsVar('defaultStreamSort', ($defaultStreamSort != '') ? $defaultS
 <?php } ?>
 
 <!-- Stream content -->
-<div id="wallStream" data-stream="<?= $streamUrl ?>" <?= $contentIdData ?>
-     data-action-component="stream.WallStream" 
+<div class="grid container" id="wallStream" data-masonry='{ "itemSelector": ".grid-item"}' data-stream="<?= $streamUrl ?>" <?= $contentIdData ?>
+     data-action-component="stream.WallStream"
      data-content-delete-url="<?= Url::to(['/content/content/delete']) ?>">
 
     <!-- DIV for a normal wall stream -->
-    <div class="s2_stream"'>
+    <div class="s2_stream">
         <div class="back_button_holder" style="display:none">
             <a href="#" class="singleBackLink btn btn-primary"><?php echo Yii::t('ContentModule.widgets_views_stream', 'Back to stream'); ?></a><br><br>
         </div>

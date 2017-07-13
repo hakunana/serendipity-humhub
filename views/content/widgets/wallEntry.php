@@ -7,9 +7,11 @@ use humhub\modules\content\components\ContentContainerController;
 
 $user = $object->content->createdBy;
 $container = $object->content->container;
+
 ?>
-<!-- TEMPORARY SOLUTION TO BE REMOVED-->
-<script src="https://unpkg.com/masonry-layout@4.2.0/dist/masonry.pkgd.js"></script>
+<!-- TEMPORARY SOLUTION TO BE FIXED -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<!--<script src="themes/serendipity-humhub/js/masonry.pkgd.js"></script>-->
 
 <!-- Next line added col-md-4 so it is a 1-3 grid-->
 <div class="grid-item col-md-4 panel panel-default wall_<?php echo $object->getUniqueId(); ?>">
