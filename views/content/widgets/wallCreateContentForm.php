@@ -14,14 +14,12 @@ $this->registerJsConfig('content.form', [
         'makePublic' => Yii::t('ContentModule.widgets_views_contentForm', 'Make public'),
         'info.archived' => Yii::t('ContentModule.widgets_views_contentForm', 'This space is archived.')
 ]]);
-
 ?>
-
 <div class="row">
     <div class="nav col-md-6 nav-search">
         <?= Html::beginForm(Url::to(['//search/search/index/']), 'GET'); ?>
         <div class="form-group form-group-search">
-            <?= Html::textInput('keyword', '', array('placeholder' => Yii::t('base', 'Search'), 'class' => 'form-control form-search', 'id' => 'search-input-field')); ?>
+            <?= Html::textInput('SearchForm[keyword]', '', array('placeholder' => Yii::t('base', 'Search'), 'class' => 'form-control form-search', 'id' => 'search-input-field')); ?>
             <?= Html::submitButton(Yii::t('base', 'Search'), array('class' => 'btn btn-default btn-sm form-button-search hidden')); ?>
         </div>
         <?= Html::endForm(); ?>
