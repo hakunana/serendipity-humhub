@@ -42,7 +42,6 @@
                 </ul>
             </div>
         </div>
-
 <!--            <div class="nav col-md-12" id="search-menu-nav">
                 <?php /*echo \humhub\widgets\TopMenuRightStack::widget(); */?>
             </div>-->
@@ -51,13 +50,14 @@
 
         <?php $this->endBody() ?>
     </body>
-    <script>
+    <script type="text/javascript">
         function openNav() {
             document.getElementById("mySidenav").style.width = "15%";
             // document.getElementByID("layout-content").style.width="85%";
             document.getElementById("layout-content").style.marginLeft = "15%";
-            
             // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            var elems = $('.masonrygrid').masonry('getItemElements');
+            console.log(elems);
         }
 
         function closeNav() {
@@ -65,8 +65,12 @@
             document.getElementById("layout-content").style.marginLeft = "0%";
             // document.getElementById("mySidenav").style.width = "0";
             // document.getElementById("main").style.marginLeft= "0";
-            document.body.style.backgroundColor = "white";
+            //document.body.style.backgroundColor = "white";
+            var elems = $('.masonrygrid').masonry('getItemElements');
+            console.log(elems);
         }
+
+
 </script>
 </html>
 <?php $this->endPage() ?>
