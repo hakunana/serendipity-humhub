@@ -9,18 +9,46 @@ $user = $object->content->createdBy;
 $container = $object->content->container;
 
 ?>
-<!-- TEMPORARY SOLUTION TO BE FIXED -->
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-<!--<script src="themes/serendipity-humhub/js/masonry.pkgd.js"></script>-->
-
 <!-- Next line added col-md-4 so it is a 1-3 grid-->
-<div class="grid-item col-md-4 panel panel-default wall_<?php echo $object->getUniqueId(); ?>">
+<div class="masonrygrid-item col-md-4 panel panel-default wall_<?php echo $object->getUniqueId(); ?>">
     <div class="panel-body">
 
         <div class="media">
             <!-- since v1.2 -->
-            <div class="stream-entry-loader"></div>
-            
+            <div class="stream-entry-loader">
+                <script>
+                   $(document).ready(function(){
+                        $('.masonrygrid').masonry({
+                            itemSelector: '.masonrygrid-item'
+                        });
+                   });
+
+/*                    $(document).ready(function () {
+                                $('.masonrygrid').imagesLoaded(function(){
+                                    $('.masonrygrid').masonry({
+                                        itemSelector : '.masonrygrid-item',
+                                        columnWidth: '.masonrygrid-item'
+                                    });
+                                    $('.masonrygrid').masonry('reloadItems');
+                                });
+                    });
+*/
+/*
+                    $('a[data-toggle=tab]').each(function () {
+                        var $this = $(this);
+
+                        $this.on('shown.bs.tab', function () {
+                            $('.masonrygrid').imagesLoaded(function(){
+                                $('.masonrygrid').masonry({
+                                    itemSelector : '.masonrygrid-item',
+                                    columnWidth: '.masonrygrid-item'
+                                });
+                            });
+                        });
+                    });
+*/
+                </script>
+            </div>
             <!-- start: show wall entry options -->
             <ul class="nav nav-pills preferences">
                 <li class="dropdown ">
