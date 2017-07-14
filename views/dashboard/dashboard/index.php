@@ -24,16 +24,12 @@ use humhub\modules\search\models\forms\SearchForm;
 
     <!-- END: new search form-->
     <div class="row">
-
         <div class="col-md-12 layout-content-container">
             <?= \humhub\modules\dashboard\widgets\DashboardContent::widget([
                 'contentContainer' => $contentContainer,
                 'showProfilePostForm' => $showProfilePostForm
             ])?>
         </div>
-
-
-
 
         <!--    START: Commented Out from standard HumHub-Theme    -->
 

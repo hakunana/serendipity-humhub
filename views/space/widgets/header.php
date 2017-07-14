@@ -11,6 +11,7 @@ if ($space->isAdmin()) {
     $this->registerJsVar('profileHeaderUploaderUrl', $space->createUrl('/space/manage/image/banner-upload'));
 }
 ?>
+
 <div class="panel panel-default panel-profile">
 
     <div class="panel-profile-header">
