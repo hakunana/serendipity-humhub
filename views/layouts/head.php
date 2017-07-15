@@ -21,3 +21,7 @@
 <!-- start: Favicon and Touch Icons -->
 <script src="<?= $this->theme->getBaseUrl(); ?>/js/imagesloaded.pkgd.js"></script>
 <script src="<?= $this->theme->getBaseUrl(); ?>/js/masonry.pkgd.js"></script>
+<script src="<?= $this->theme->getBaseUrl(); ?>/js/isotope.pkgd.js"></script>
+<script src="<?= $this->theme->getBaseUrl(); ?>/js/ResizeSensor.js"></script>
+<script src="<?= $this->theme->getBaseUrl(); ?>/js/ElementQueries.js"></script>
+<script src="<?= $this->theme->getBaseUrl(); ?>/js/SideNavFunctions.js"></script>
