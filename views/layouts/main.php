@@ -43,14 +43,19 @@
             </div>
         </div>
 
+<<<<<<< HEAD
 <!--            <div class="nav col-md-12" id="search-menu-nav">
                 <?php /*echo \humhub\widgets\TopMenuRightStack::widget(); */?>
             </div>-->
           <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+=======
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+>>>>>>> menu-integration
         <?= $content; ?>
 
         <?php $this->endBody() ?>
     </body>
+<<<<<<< HEAD
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "15%";
@@ -67,6 +72,17 @@
             // document.getElementById("main").style.marginLeft= "0";
             document.body.style.backgroundColor = "white";
         }
+=======
+    <script type="text/javascript">
+        var element = document.getElementById('mySidenav');
+        new ResizeSensor(element, function() {
+            $('.outerdivgrid').masonry('layout');
+           // console.log("RELOAD ELEMENTS");
+            //var elems = $('.masonrygrid').masonry('getItemElements');
+            //console.log(elems);
+        });
+>>>>>>> menu-integration
 </script>
+
 </html>
 <?php $this->endPage() ?>

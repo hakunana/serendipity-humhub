@@ -19,7 +19,7 @@ $isActivity = $entry->object_model == humhub\modules\activity\models\Activity::c
 
     <div class="<?= $cssClass ?>" data-stream-entry data-stream-pinned="<?= $entry->pinned ?>"
          data-action-component="stream.StreamEntry" data-content-key="<?= $entry->id; ?>" >
-        
+
 <?php endif; ?>
 
 <?php echo $content; ?>
