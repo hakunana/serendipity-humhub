@@ -94,7 +94,7 @@ if ($space->isAdmin()) {
             <?php } ?>
         </div>
 
-        <div class="image-upload-container profile-user-photo-container" style="width: 140px; height: 140px;">
+        <div class="image-upload-container profile-user-photo-container" style="width: 140px; height: 140px; border-radius: 50%">
 
             <?php if ($space->profileImage->hasImage()) : ?>
                 <!-- profile image output-->
