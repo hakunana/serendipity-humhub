@@ -63,9 +63,13 @@ $this->registerJsVar('defaultStreamSort', ($defaultStreamSort != '') ? $defaultS
 <?php } ?>
 
 <!-- Stream content -->
+<<<<<<< HEAD
+<div class="grid container" id="wallStream" data-masonry='{ "itemSelector": ".grid-item"}' data-stream="<?= $streamUrl ?>" <?= $contentIdData ?>
+=======
 <div id="wallStream"
      class="outerdivgrid"
      data-stream="<?= $streamUrl ?>" <?= $contentIdData ?>
+>>>>>>> menu-integration
      data-action-component="stream.WallStream"
      data-content-delete-url="<?= Url::to(['/content/content/delete']) ?>">
 

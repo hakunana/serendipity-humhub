@@ -11,6 +11,7 @@ if ($space->isAdmin()) {
     $this->registerJsVar('profileHeaderUploaderUrl', $space->createUrl('/space/manage/image/banner-upload'));
 }
 ?>
+
 <div class="panel panel-default panel-profile">
 
     <div class="panel-profile-header">
@@ -93,7 +94,7 @@ if ($space->isAdmin()) {
             <?php } ?>
         </div>
 
-        <div class="image-upload-container profile-user-photo-container" style="width: 140px; height: 140px;">
+        <div class="image-upload-container profile-user-photo-container" style="width: 140px; height: 140px; border-radius: 50%">
 
             <?php if ($space->profileImage->hasImage()) : ?>
                 <!-- profile image output-->

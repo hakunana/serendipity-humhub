@@ -9,10 +9,15 @@ $user = $object->content->createdBy;
 $container = $object->content->container;
 
 ?>
+
 <div class="innerdivgrid panel panel-default wall_<?php echo $object->getUniqueId(); ?>">
+
     <div class="panel-body">
         <div class="media">
             <!-- since v1.2 -->
+
+            
+
             <div class="stream-entry-loader">
                 <script>
                    $(document).ready(function () {
@@ -26,6 +31,7 @@ $container = $object->content->container;
                     });
                 </script>
             </div>
+
             <!-- start: show wall entry options -->
             <ul class="nav nav-pills preferences">
                 <li class="dropdown ">

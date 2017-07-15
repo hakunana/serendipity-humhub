@@ -18,6 +18,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="<?= $this->theme->getBaseUrl(); ?>/ico/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+
 <!-- start: Favicon and Touch Icons -->
 <script src="<?= $this->theme->getBaseUrl(); ?>/js/imagesloaded.pkgd.js"></script>
 <script src="<?= $this->theme->getBaseUrl(); ?>/js/masonry.pkgd.js"></script>
