@@ -64,7 +64,7 @@ $this->registerJsVar('defaultStreamSort', ($defaultStreamSort != '') ? $defaultS
 
 <!-- Stream content -->
 <div id="wallStream"
-     class="masonrygrid"
+     class="outerdivgrid"
      data-stream="<?= $streamUrl ?>" <?= $contentIdData ?>
      data-action-component="stream.WallStream"
      data-content-delete-url="<?= Url::to(['/content/content/delete']) ?>">
@@ -99,7 +99,6 @@ $this->registerJsVar('defaultStreamSort', ($defaultStreamSort != '') ? $defaultS
 
     </div>
 </div>
-
 
 <!-- show "Load More" button on mobile devices -->
 <div class="col-md-12 text-center visible-xs visible-sm">
