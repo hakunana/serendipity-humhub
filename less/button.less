@@ -14,7 +14,14 @@
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 0 16px;
+  i{
+    color:@white;
+  }
+  .caret {
+    margin-left: 5px;
+    margin-top: -2px;
+}
 }
 
 .input.btn {
@@ -22,11 +29,11 @@
 }
 
 .btn-lg {
-  padding: 16px 28px;
+  padding: 0 16px;
 }
 
 .btn-sm {
-  padding: 4px 8px;
+  padding: 0 16px;
   font-size: 12px;
   i {
     font-size: 14px;
@@ -34,64 +41,64 @@
 }
 
 .btn-xs {
-  padding: 1px 5px;
+  padding: 0 16px;
   font-size: 12px;
 }
 
 .btn-default {
-  background: @default;
-  color: @text-color-secondary !important;
+  background: @darkslate;
+  color: @white !important;
   &:hover,
   &:focus {
-    background: darken(@default, 2%);
+    background: darken(@darkslate, 2%);
     text-decoration: none;
-    color: @text-color-secondary;
+    color: @white;
   }
   &:active,
   &.active {
     outline: 0;
-    background: darken(@default, 5%);
+    background: darken(@darkslate, 5%);
   }
 }
 
 .btn-default[disabled],
 .btn-default.disabled {
-  background: lighten(@default, 2%);
+  background: lighten(@darkslate, 2%);
   &:hover,
   &:focus {
-    background: lighten(@default, 2%);
+    background: lighten(@darkslate, 2%);
   }
   &:active,
   &.active {
-    background: lighten(@default, 2%);
+    background: lighten(@darkslate, 2%);
   }
 }
 
 .btn-primary {
-  background: @primary;
+  background: @darkslate;
   color: @text-color-contrast !important;
   &:hover,
   &:focus {
-    background: darken(@primary, 5%);
+    background: darken(@darkslate, 5%);
     text-decoration: none;
   }
   &:active,
   &.active {
     outline: 0;
-    background: darken(@primary, 5%) !important;
+    background: darken(@darkslate, 5%) !important;
   }
 }
 
 .btn-primary[disabled],
 .btn-primary.disabled {
-  background: lighten(@primary, 5%);
+  background: lighten(@darkslate, 5%);
   &:hover,
   &:focus {
-    background: lighten(@primary, 5%);
+    background: lighten(@darkslate, 5%);
   }
   &:active,
   &.active {
-    background: lighten(@primary, 5%) !important;
+    background: lighten(@darkslate, 5%) !important;
   }
 }
 
