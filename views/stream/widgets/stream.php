@@ -64,7 +64,6 @@ $this->registerJsVar('defaultStreamSort', ($defaultStreamSort != '') ? $defaultS
 
 <!-- Stream content -->
 <div id="wallStream"
-     class="outerdivgrid"
      data-stream="<?= $streamUrl ?>" <?= $contentIdData ?>
      data-action-component="stream.WallStream"
      data-content-delete-url="<?= Url::to(['/content/content/delete']) ?>">
@@ -75,7 +74,7 @@ $this->registerJsVar('defaultStreamSort', ($defaultStreamSort != '') ? $defaultS
             <a href="#" class="singleBackLink btn btn-primary"><?php echo Yii::t('ContentModule.widgets_views_stream', 'Back to stream'); ?></a><br><br>
         </div>
 
-        <div class="s2_streamContent" data-stream-content></div>
+        <div class="s2_streamContent outerdivgrid" data-stream-content></div>
 
         <div class="emptyStreamMessage" style="display:none;">
             <div class="<?php echo $this->context->messageStreamEmptyCss; ?>">

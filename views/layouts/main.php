@@ -43,12 +43,7 @@
             </div>
         </div>
 
-
-<!--            <div class="nav col-md-12" id="search-menu-nav">
-                <?php /*echo \humhub\widgets\TopMenuRightStack::widget(); */?>
-            </div>-->
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
-
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
         <?= $content; ?>
 
         <?php $this->endBody() ?>
@@ -61,6 +56,7 @@
             //var elems = $('.masonrygrid').masonry('getItemElements');
             //console.log(elems);
         });
+
 </script>
 
 </html>

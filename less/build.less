@@ -2,7 +2,7 @@
 
 // Edit this if your theme folder resides outside of your humhub/themes directory.
 @HUMHUB:  "../../../static/less";
-@VENDOR: "../vendor";
+@EXTERNAL: "../external";
 
 // Import default variables and mixins
 @import "@{HUMHUB}/variables.less";
@@ -10,7 +10,7 @@
 
 
 // Import external Libraries
-// @import "@{VENDOR}/materialize.less";
+@import "@{EXTERNAL}/materialize.less";
 
 // Import default less
 @import "@{HUMHUB}/humhub.less";
@@ -25,6 +25,3 @@
 @import "theme.less";
 @import "button.less";
 @import "panel.less"; 
-@import "navigation.less"; 
-@import "card.less"; 
-@import "space.less"; 
