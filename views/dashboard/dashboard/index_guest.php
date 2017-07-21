@@ -6,6 +6,9 @@
 use humhub\libs\Html;
 use yii\helpers\Url;
 ?>
+<script>
+    removeActivitiesDiv();
+</script>
 <div class="container">
     <!-- START: new search form-->
 

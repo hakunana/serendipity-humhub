@@ -8,6 +8,9 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 use humhub\modules\search\models\forms\SearchForm;
 ?>
+<script>
+    removeActivitiesDiv();
+</script>
 <div class="container">
     <!-- START: new search form-->
 
