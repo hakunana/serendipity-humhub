@@ -15,3 +15,15 @@ function closeNav() {
     // document.getElementById("main").style.marginLeft= "0";
     //document.body.style.backgroundColor = "white";
 }
+
+function removeActivitiesDiv(){
+    $(".sidenav_content_hidden_cloned").remove();
+}
+
+function loadActivitiesDiv() {
+    removeActivitiesDiv();
+    var $clonedActivities = $(".sidenav_content_hidden").clone(true);
+    $clonedActivities.addClass("sidenav_content_hidden_cloned");
+    $("#recent_activities").prepend($clonedActivities);
+    $clonedActivities.show();
+}

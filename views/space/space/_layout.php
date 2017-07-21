@@ -72,4 +72,15 @@ $space = $this->context->contentContainer;
         <!-- END Commented out if/else for different sizes. No need as there is just one row with no more sidebars-->
 
     </div>
+    <div class="sidenav_content_hidden" style="display: none">
+        <?php
+        echo \humhub\modules\space\widgets\Sidebar::widget(['space' => $this->context->contentContainer,
+            'widgets' => [[\humhub\modules\activity\widgets\Stream::className(),
+                ['streamAction' => '/space/space/stream','contentContainer' => $this->context->contentContainer],
+                ['sortOrder' => 10]]]]);
+        ?>
+    </div>
+    <script>
+        loadActivitiesDiv();
+    </script>
 </div>

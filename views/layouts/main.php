@@ -41,6 +41,8 @@
 
                 </ul>
             </div>
+                <div id="recent_activities">
+                </div>
         </div>
 
         <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
