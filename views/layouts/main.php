@@ -48,16 +48,5 @@
 
         <?php $this->endBody() ?>
     </body>
-    <script type="text/javascript">
-        var element = document.getElementById('mySidenav');
-        new ResizeSensor(element, function() {
-            $('.outerdivgrid').masonry('layout');
-           // console.log("RELOAD ELEMENTS");
-            //var elems = $('.masonrygrid').masonry('getItemElements');
-            //console.log(elems);
-        });
-
-</script>
-
 </html>
 <?php $this->endPage() ?>

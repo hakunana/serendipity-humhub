@@ -64,32 +64,32 @@ body{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-/*
 
-.innerdivgrid { width: 100%; }
+/* ---- grid-items ---- */
 
-@media screen and (min-width: 1000px){
-  .innerdivgrid { width: 50%; }
+.outerdivgrid {
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1;
 }
 
-@media screen and (min-width: 1800px) {
-  .innerdivgrid { width: 33.333%; }
-}
-*/
-
-/* ---- grid-item ---- */
-
-.grid-item {
-  width: 400px;
-  // height: 120px;
-  //float: left;
-  // background: #D26;
-  // border: 2px solid #333;
-  // border-color: hsla(0, 0%, 0%, 0.5);
-  // border-radius: 5px;
-
+.innerdivgrid{
+  display: inline-block;
+  width: 100%;
 }
 
-// .wall-entry{
-// 	margin:10px;
-// }
+@media only screen and (min-width : 999px){
+  .outerdivgrid {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width : 1799px){
+  .outerdivgrid {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}

@@ -11,7 +11,7 @@
  */
 ?>
 <?php
-$cssClass = ($entry->pinned) ? 'wall-entry pinned-entry' : 'wall-entry';
+$cssClass = ($entry->pinned) ? 'wall-entry pinned-entry' : 'wall-entry innerdivgrid';
 $isActivity = $entry->object_model == humhub\modules\activity\models\Activity::className();
 ?>
 
