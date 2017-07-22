@@ -1,5 +1,6 @@
 /**
  * Created by stefa on 15.07.2017.
+ * extended by hannana  on 20.07.2017
  */
 function openNav() {
     document.getElementById("mySidenav").style.width = "15%";
@@ -38,5 +39,11 @@ function reorder_spaces(){
 
     //$spacelist = this.jQuery.find(".spacechooser_parent");
     //this.console.log($spacelist);
+}
+
+function openSpacesInNav(){
+    var $spaceMenu = $('#space-menu');
+    $spaceMenu.attr("aria-expanded","true");
+    
 }
 

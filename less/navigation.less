@@ -1,4 +1,10 @@
-
+i.fa.fa-bars{
+    top:4px;
+    position: fixed;
+            background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%););
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
 .sidenav {
     height: 100%;
     width: 0;
@@ -12,23 +18,38 @@
     transition: 0.5s;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
     font-size: 14px;
-    a{
-      font-size: 12px;
-    }
-    .navbar-brand{
-      color: @brandcolor;
-      font-size: 16px;
+
+    // .navbar-brand{
+    //     margin-top: 50px;
+    //   color: @brandcolor;
+    //   font-size: 24px;
+    //   text-align: center;
+    //   a{
+    //     background: -webkit-linear-gradient(#eee, #333);
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    //   }
+    // }
+    .second-panel{
+        text-align: center;
     }
 }
 
 .sidenav .closebtn {
-    position: absolute;
+    // position: absolute;
     top: 0;
-    right: 25px;
+    // right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    margin-right: 20px;
+    float: right;
 }
 
+.dropdown-menu {
+    .btn{
+        margin:4px;
+        font-size: 10px;
+    }
+}
 .second-panel , .third-panel, .first-panel{
     display: inline-block;
 }
@@ -36,11 +57,23 @@
     font-family: 'Roboto';
     font-weight: 900;
     letter-spacing: 4px;
-    color: #ff7777;
+    
+    margin-top: -20px;
+    
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
     &:hover{
         color: #ff5252;
     }
+        background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%););
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      
 }
+
+
 .nav-pills .dropdown-menu, .nav-tabs .dropdown-menu, .account .dropdown-menu{
     background-color: @darkslate;
     i{
@@ -55,16 +88,19 @@
 }
 div#notification_widget {
     z-index: 1;
-    margin-left: 120px;
+    margin-left: 22px;
     background-color: #fff;
-    margin-top: 120px;
+    margin-top: 122px;
     position: absolute;
     border: 1px solid #fff;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     text-align: center;
-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    i{
+        margin-top: 2px;
+    }
 }
 .user-title img{
     min-width: 100px;
@@ -72,7 +108,25 @@ box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px 
     margin: 30px;
 }
 
+.open > .dropdown-menu {
+    display: block;
+    /* z-index: 3; */
+    /* overflow-x: visible; */
+    /* position: inherit; */
+    margin-left: -130px;
+    max-width: 10%;
+    font-size: 10px!important;
+}
+
+
+.media-list li.placeholder {
+    font-size: 10px !important;
+    border-bottom: none;
+}
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+  .sidenav {padding-top: 15px;
+    }
+    #mySidenav{width: 80%!important;}
   .sidenav a {font-size: 18px;}
+
 }
