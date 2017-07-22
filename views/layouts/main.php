@@ -51,5 +51,8 @@
 
         <?php $this->endBody() ?>
     </body>
+    <script>
+        $(window).load(reorder_spaces());
+    </script>
 </html>
 <?php $this->endPage() ?>

@@ -27,3 +27,16 @@ function loadActivitiesDiv() {
     $("#recent_activities").prepend($clonedActivities);
     $clonedActivities.show();
 }
+
+function reorder_spaces(){
+    //get list of current spaces
+    var $wrapper = $('#space-menu-spaces');
+
+    $wrapper.find(".spacechooser_parent").sort(function(a, b) {
+        return a.getAttribute('update_count_value') + b.getAttribute('update_count_value');
+    }).appendTo($wrapper);
+
+    //$spacelist = this.jQuery.find(".spacechooser_parent");
+    //this.console.log($spacelist);
+}
+
