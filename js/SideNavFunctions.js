@@ -33,7 +33,7 @@ function reorder_spaces(){
     var $wrapper = $('#space-menu-spaces');
 
     $wrapper.find(".spacechooser_parent").sort(function(a, b) {
-        return a.getAttribute('update_count_value') + b.getAttribute('update_count_value');
+        return +(a.getAttribute('update_count_value')*-1) - +(b.getAttribute('update_count_value')*-1);
     }).appendTo($wrapper);
 
     //$spacelist = this.jQuery.find(".spacechooser_parent");
