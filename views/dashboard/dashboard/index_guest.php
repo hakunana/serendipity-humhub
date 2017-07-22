@@ -15,9 +15,10 @@ use yii\helpers\Url;
     <div class = "row">
         <div class="nav col-md-offset-3 col-md-6 nav-search">
             <?= Html::beginForm(Url::to(['//search/search/index/']), 'GET'); ?>
-            <div class="form-group form-group-search">
+            <div class="form-group form-group-search list-inline">
+                <i class="fa fa-search" aria-hidden="true"></i>
                 <?= Html::textInput('SearchForm[keyword]', '', array('placeholder' => Yii::t('base', 'Search'), 'class' => 'form-control form-search', 'id' => 'search-input-field')); ?>
-                <?= Html::submitButton(Yii::t('base', 'Search'), array('class' => 'btn btn-default btn-sm form-button-search hidden')); ?>
+                <?= Html::submitButton(Yii::t('base', 'Search'), array('class' => 'btn btn-default btn-sm form-button-search ')); ?>
             </div>
             <?= Html::endForm(); ?>
         </div>

@@ -18,20 +18,21 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         
-            <div class="topbar-brand hidden-xs">
+            <div class="col-lg-12 topbar-brand hidden-xs">
                         <?php echo \humhub\widgets\SiteLogo::widget(); ?>
             </div>
 
-            <div id="second-panel" class="second-panel">
-                <?php echo \humhub\modules\user\widgets\AccountTopMenu::widget(); ?>
-
-            </div>
-            <div id="third-panel" class="third-panel">
-                <?php
+            <div id="second-panel" class="second-panel col-lg-12 ">
+            <?php
                     echo \humhub\widgets\NotificationArea::widget(['widgets' => [
                             [\humhub\modules\notification\widgets\Overview::className(), [], ['sortOrder' => 10]],
                     ]]);
                 ?>
+                <?php echo \humhub\modules\user\widgets\AccountTopMenu::widget(); ?>
+
+            </div>
+            <div id="third-panel" class="third-panel ">
+                blablala
             </div>
             <hr>
             <div id="space-chooser" class="space-chooser card">

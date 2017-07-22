@@ -23,7 +23,10 @@
     margin-top: -2px;
 }
 }
-
+.form-group-search .form-button-search {
+  background-color: @brandcolor;
+  border-radius: 3px;
+}
 .input.btn {
   outline: none;
 }
@@ -46,46 +49,46 @@
 }
 
 .btn-default {
-  background: @darkslate;
+  background: @brandcolor;
   color: @white !important;
   &:hover,
   &:focus {
-    background: darken(@darkslate, 2%);
+    background: darken(@brandcolor, 2%);
     text-decoration: none;
     color: @white;
   }
   &:active,
   &.active {
     outline: 0;
-    background: darken(@darkslate, 5%);
+    background: darken(@brandcolor, 5%);
   }
 }
 
 .btn-default[disabled],
 .btn-default.disabled {
-  background: lighten(@darkslate, 2%);
+  background: lighten(@brandcolor, 2%);
   &:hover,
   &:focus {
-    background: lighten(@darkslate, 2%);
+    background: lighten(@brandcolor, 2%);
   }
   &:active,
   &.active {
-    background: lighten(@darkslate, 2%);
+    background: lighten(@brandcolor, 2%);
   }
 }
 
 .btn-primary {
-  background: @darkslate;
+  background: @brandcolor;
   color: @text-color-contrast !important;
   &:hover,
   &:focus {
-    background: darken(@darkslate, 5%);
+    background: darken(@brandcolor, 5%);
     text-decoration: none;
   }
   &:active,
   &.active {
     outline: 0;
-    background: darken(@darkslate, 5%) !important;
+    background: darken(@brandcolor, 5%) !important;
   }
 }
 
