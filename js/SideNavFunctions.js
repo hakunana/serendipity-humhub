@@ -36,9 +36,7 @@ function reorder_spaces(){
     $wrapper.find(".spacechooser_parent").sort(function(a, b) {
         return +b.getAttribute('update_count_value') - +a.getAttribute('update_count_value');
     }).appendTo($wrapper);
-
-    //$spacelist = this.jQuery.find(".spacechooser_parent");
-    //this.console.log($spacelist);
+    
 }
 
 function openSpacesInNav(){
