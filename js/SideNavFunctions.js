@@ -39,9 +39,3 @@ function reorder_spaces(){
     
 }
 
-function openSpacesInNav(){
-    var $spaceMenu = $('#space-menu');
-    $spaceMenu.attr("aria-expanded","true");
-    
-}
-
