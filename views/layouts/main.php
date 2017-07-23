@@ -44,8 +44,31 @@
 
                 </ul>
             </div>
-            <div id="recent_activities">
+
+            <!-- @Stefano Start -->
+
+            <!-- START TODO REFACTORING: Following logic should be externalized in controller -->
+
+            <!-- recent_activities DIV used as container for SPACES SPECIFIC list of activities-->
+            <!-- This div gets populated with according space-specific data when entering a space-->
+            <div id="recent_activities"></div>
+
+            <!-- dashboard_activities DIV lists all recent activities on DASHBOARD LEVEL ONLY -->
+            <!-- This div gets hidden when entering a space, as recent_activities DIV takes over -->
+            <div id="dashboard_activities">
+                <?php
+                    echo \humhub\modules\dashboard\widgets\Sidebar::widget([
+                        'widgets' => [
+                            [\humhub\modules\activity\widgets\Stream::className(),
+                                ['streamAction' => '/dashboard/dashboard/stream'],
+                                ['sortOrder' => 150]
+                            ]
+                        ]
+                    ]);
+                ?>
             </div>
+            <!-- END TODO REFACTORING -->
+
         </div>
 
         <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
@@ -54,7 +77,9 @@
         <?php $this->endBody() ?>
     </body>
     <script>
+        // Reorder list of spaces in sidebar according to largest #of new entries since last visit
         $(window).load(reorder_spaces());
     </script>
+    <!-- @Stefano End -->
 </html>
 <?php $this->endPage() ?>

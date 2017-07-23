@@ -16,8 +16,12 @@ $this->registerJsConfig('content.form', [
 ]]);
 ?>
 <div class="row">
-    
-        <div class="nav col-md-offset-3 col-md-6 nav-search">
+    <!-- @Stefano Start -->
+    <!--
+        Embedded search bar widget in in wall content form.
+        Changed to correct search URL '...search/search/index/&SearchForm[keyword]=' in order to redirect to dedicated search page with correct keyword as param
+    -->
+        <div id="space_search" class="nav col-md-6 nav-search">
             <?= Html::beginForm(Url::to(['//search/search/index/']), 'GET'); ?>
             <div class="form-group form-group-search">
                 <?= Html::textInput('SearchForm[keyword]', '', array('placeholder' => Yii::t('base', 'Search'), 'class' => 'form-control form-search', 'id' => 'search-input-field')); ?>
@@ -25,7 +29,7 @@ $this->registerJsConfig('content.form', [
             </div>
             <?= Html::endForm(); ?>
         </div>
-
+    <!-- @Stefano End -->
 
     <div class="nav col-md-6" id="contentFormBody" style="display:none;" data-action-component="content.form.CreateForm" >
         <?= Html::beginForm($submitUrl, 'POST'); ?>

@@ -15,63 +15,23 @@ $space = $this->context->contentContainer;
     </div>
 
     <div class="row">
-        <!-- START remove space menu - to be added in space header and index / index_guest-->
-<!--        <div class="col-md-2 layout-nav-container">
-            <?php /*echo \humhub\modules\space\widgets\Menu::widget(['space' => $space]); */?>
-            <br>
-        </div>-->
 
-        <!-- START remove space menu - to be added in space header and index / index_guest-->
-
-        <!-- START new full-size content widget-->
         <div class="col-md-12 layout-content-container">
             <?= \humhub\modules\space\widgets\SpaceContent::widget([
                 'contentContainer' => $space,
                 'content' => $content
             ]) ?>
         </div>
-        <!-- END new full-size content widget-->
-
-        <!-- START Commented out if/else for different sizes. No need as there is just one row with no more sidebars-->
-
-        <!-- START Commented out if/else for different sizes. No need as there is just one row with no more sidebars-->
-
-       <!-- <?php /*if (isset($this->context->hideSidebar) && $this->context->hideSidebar) : */?>
-            <div class="col-md-10 layout-content-container">
-                <?/*= \humhub\modules\space\widgets\SpaceContent::widget([
-                    'contentContainer' => $space,
-                    'content' => $content
-                ]) */?>
-            </div>
-        <?php /*else: */?>
-            <div class="col-md-7 layout-content-container">
-                <?/*= \humhub\modules\space\widgets\SpaceContent::widget([
-                    'contentContainer' => $space,
-                    'content' => $content
-                ]) */?>
-            </div>-->
-
-
-            <!-- END Commented out if/else for different sizes. No need as there is just one row with no more sidebars-->
-
-            <!-- START Commented out right sidebar (activities etc...)-->
-
-          <!--  <div class="col-md-3 layout-sidebar-container">
-                <?php
-/*              echo \humhub\modules\space\widgets\Sidebar::widget(['space' => $space, 'widgets' => [
-                        [\humhub\modules\activity\widgets\Stream::className(), ['streamAction' => '/space/space/stream', 'contentContainer' => $space], ['sortOrder' => 10]],
-                        [\humhub\modules\space\modules\manage\widgets\PendingApprovals::className(), ['space' => $space], ['sortOrder' => 20]],
-                        [\humhub\modules\space\widgets\Members::className(), ['space' => $space], ['sortOrder' => 30]]
-                ]]);
-                */?>
-            </div>-->
-            <!-- END Commented out right sidebar (activities etc...)-->
-
-<!--        --><?php //endif; ?>
-
-        <!-- END Commented out if/else for different sizes. No need as there is just one row with no more sidebars-->
 
     </div>
+    <!-- @Stefano Start -->
+    <!--
+        sidenav_content_hidden DIV calls space specific content data such as activities for example.
+        sidenav_content_hidden DIV gets cloned into main.php -> recent_activities DIV.
+        Controller is setup so that space specific content is mostly exclusively loaded correctly if DIV is child Element of stream.php -> wallStream DIV.
+        So in order to receive appropriate data without changing the controller, the DIV needs first to be loaded here and afterwards the data is cloned out of stream.php -> wallStream DIV.
+        clone is removed each time when changing to another site/space and recreated in order to stay always up-to-date with the correct space and content.
+    -->
     <div class="sidenav_content_hidden" style="display: none">
         <?php
         echo \humhub\modules\space\widgets\Sidebar::widget(['space' => $space, 'widgets' => [
@@ -82,6 +42,8 @@ $space = $this->context->contentContainer;
         ?>
     </div>
     <script>
+        //Load space specific activities list from sidenav_content_hidden DIV
         loadActivitiesDiv();
     </script>
+    <!-- @Stefano End -->
 </div>

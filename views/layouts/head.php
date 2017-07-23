@@ -19,4 +19,8 @@
 <meta name="msapplication-TileImage" content="<?= $this->theme->getBaseUrl(); ?>/ico/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <!-- start: Favicon and Touch Icons -->
+
+<!-- @Stefano Start -->
+<!-- Externalized jscript with sidebar actions into dedicated folder and calling from head.php with dynamic baseURL param (so it is theme-name unspecific)-->
 <script src="<?= $this->theme->getBaseUrl(); ?>/js/SideNavFunctions.js"></script>
+<!-- @Stefano End -->

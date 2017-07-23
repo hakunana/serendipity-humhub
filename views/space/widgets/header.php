@@ -172,59 +172,18 @@ if ($space->isAdmin()) {
                 ['sortOrder' => 30]]
         ]]);
         ?>
+        <!-- @Stefano Start -->
+        <!-- Changed button to dropdown by calling dropdown template -->
         <?=
         humhub\modules\space\widgets\HeaderControlsMenu::widget([
             'space' => $space,
             'template' => '@humhub/widgets/views/dropdownNavigation'
         ]);
         ?>
+        <!-- @Stefano End -->
     </div>
 
     <div class="row"></div>
-
-    <!-- START: Comment out panel body with user stats , not used in space header in this theme -->
-
-<!--    <div class="panel-body">
-
-        <div class="panel-profile-controls">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="statistics pull-left">
-
-                        <div class="pull-left entry">
-                            <span class="count"><?php /*echo $postCount; */?></span></a>
-                            <br>
-                            <span
-                                class="title"><?php /*echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Posts'); */?></span>
-                        </div>
-
-                        <a href="<?/*= $space->createUrl('/space/membership/members-list'); */?>" data-target="#globalModal">
-                            <div class="pull-left entry">
-                                <span class="count"><?php /*echo $space->getMemberships()->count(); */?></span>
-                                <br>
-                                <span
-                                    class="title"><?php /*echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Members'); */?></span>
-                            </div>
-                        </a>
-
-                        <a href="<?/*= $space->createUrl('/space/space/follower-list'); */?>" data-target="#globalModal">
-                            <div class="pull-left entry">
-                                <span class="count"><?php /*echo $space->getFollowerCount(); */?></span><br>
-                                <span
-                                    class="title"><?php /*echo Yii::t('SpaceModule.widgets_views_profileHeader', 'Followers'); */?></span>
-                            </div>
-                        </a>
-
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>-->
-    <!-- END: Comment out panel body with user stats , not used in space header in this theme -->
 
 </div>
 

@@ -31,6 +31,13 @@ a.list-group-item:hover, a.list-group-item.active, a.list-group-item.active:hove
 }
 /* ---- grid-items ---- */
 
+//@Stefano Start
+// Instead of masonry/isotope added masonry-like rid via native CSS
+// Implications:
+// Negative: Grid is sorted N-wise (top-down -> left-right) instead of Z wise (left-right -> top-down)
+// Positive: Grid is very consistent and stable over all sites as there is no complicated jScript intervention
+
+//Default grid consists of 1 by n column
 .outerdivgrid {
   -moz-column-count: 1;
   -webkit-column-count: 1;
@@ -41,7 +48,7 @@ a.list-group-item:hover, a.list-group-item.active, a.list-group-item.active:hove
   display: inline-block;
   width: 100%;
 }
-
+//For medium size screens the grid consists of 2 by n column
 @media only screen and (min-width : 999px){
   .outerdivgrid {
     -moz-column-count: 2;
@@ -50,6 +57,7 @@ a.list-group-item:hover, a.list-group-item.active, a.list-group-item.active:hove
   }
 }
 
+//For large size screens the grid consists of 3 by n column
 @media only screen and (min-width : 1799px){
   .outerdivgrid {
     -moz-column-count: 3;
@@ -57,3 +65,4 @@ a.list-group-item:hover, a.list-group-item.active, a.list-group-item.active:hove
     column-count: 3;
   }
 }
+//@Stefano End

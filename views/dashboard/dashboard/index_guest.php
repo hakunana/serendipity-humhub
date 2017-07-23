@@ -6,13 +6,22 @@
 use humhub\libs\Html;
 use yii\helpers\Url;
 ?>
+<!-- @Stefano Start -->
 <script>
+    if(!document.getElementById("#space_search"))
+    {
+        $("#index_guest_search").show();
+    };
+
+    // reset navbar activities container to dashboard level
     removeActivitiesDiv();
+
 </script>
+<!-- @Stefano End -->
 <div class="container">
     <!-- START: new search form-->
 
-    <div class = "row">
+    <div id="index_guest_search" class = "row" style="display: none">
         <div class="nav col-md-offset-3 col-md-6 nav-search">
             <?= Html::beginForm(Url::to(['//search/search/index/']), 'GET'); ?>
             <div class="form-group form-group-search list-inline">
@@ -30,25 +39,5 @@ use yii\helpers\Url;
             <?= \humhub\modules\dashboard\widgets\DashboardContent::widget(); ?>
         </div>
 
-        <!--    START: Commented Out from standard HumHub-Theme    -->
-<!--        <div class="col-md-4 layout-sidebar-container">
-            <?php
-/*            echo \humhub\modules\dashboard\widgets\Sidebar::widget([
-                'widgets' => [
-                    [
-                        \humhub\modules\directory\widgets\NewMembers::className(),
-                        ['showMoreButton' => true],
-                        ['sortOrder' => 300]
-                    ],
-                    [
-                        \humhub\modules\directory\widgets\NewSpaces::className(),
-                        ['showMoreButton' => true],
-                        ['sortOrder' => 400]
-                    ],
-                ]
-            ]);
-            */?>
-        </div>-->
-        <!--    END: Commented Out from standard HumHub-Theme    -->
     </div>
 </div>

@@ -8,15 +8,23 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 use humhub\modules\search\models\forms\SearchForm;
 ?>
+<!-- @Stefano Start -->
 <script>
+    if(!document.getElementById("#space_search"))
+    {
+        $("#index_search").show();
+    };
+
+    // reset navbar activities container to dashboard level
     removeActivitiesDiv();
 </script>
+<!-- @Stefano End -->
 <div class="container">
     <!-- START: new search form-->
 
     <div class = "row">
 
-        <div class="nav col-md-offset-3 col-md-6 nav-search">
+        <div id="index_search" class="nav col-md-offset-3 col-md-6 nav-search" style="display: none">
             <i class="fa fa-search" aria-hidden="true"></i>
             <?= Html::beginForm(Url::to(['//search/search/index/']), 'GET'); ?>
             <div class="form-group form-group-search">
@@ -37,25 +45,5 @@ use humhub\modules\search\models\forms\SearchForm;
             ])?>
         </div>
 
-
-
-
-        <!--    START: Commented Out from standard HumHub-Theme    -->
-
-        <!--<div class="col-md-4 layout-sidebar-container">
-            <?php
-/*            echo \humhub\modules\dashboard\widgets\Sidebar::widget([
-                'widgets' => [
-                    [
-                        \humhub\modules\activity\widgets\Stream::className(),
-                        ['streamAction' => '/dashboard/dashboard/stream'],
-                        ['sortOrder' => 150]
-                    ]
-                ]
-            ]);
-            */?>
-        </div>-->
-
-        <!--    END: Commented Out from standard HumHub-Theme    -->
     </div>
 </div>

@@ -25,6 +25,11 @@ $this->registerJsConfig('space.chooser', [
     <ul>
         <li class="divider"></li>
         <li>
+            <!-- @Stefano Start -->
+            <!--
+                Added id="space-menu-spaces" to DIV as a reference point for JScript reorder_spaces function
+            -->
+
             <ul class="media-list notLoaded" id="space-menu-spaces">
                 <?php foreach ($memberships as $membership): ?>
                     <?= SpaceChooserItem::widget(['space' => $membership->space, 'updateCount' => $membership->countNewItems(), 'isMember' => true]); ?>
@@ -33,6 +38,7 @@ $this->registerJsConfig('space.chooser', [
                     <?= SpaceChooserItem::widget(['space' => $followSpace, 'isFollowing' => true]); ?>
                 <?php endforeach; ?>
             </ul>
+            <!-- @Stefano End -->
         </li>
 
         <?php if ($canCreateSpace): ?>
