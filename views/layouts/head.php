@@ -23,4 +23,11 @@
 <!-- @Stefano Start -->
 <!-- Externalized jscript with sidebar actions into dedicated folder and calling from head.php with dynamic baseURL param (so it is theme-name unspecific)-->
 <script src="<?= $this->theme->getBaseUrl(); ?>/js/SideNavFunctions.js"></script>
+<script src="<?= $this->theme->getBaseUrl(); ?>/js/masonry.pkgd.js"></script>
+<script src="<?= $this->theme->getBaseUrl(); ?>/js/ResizeSensor.js"></script>
+<script src="<?= $this->theme->getBaseUrl(); ?>/js/ElementQueries.js"></script>
+<script src="<?= $this->theme->getBaseUrl(); ?>/js/humhub.stream.js"></script>
 <!-- @Stefano End -->
+
+
+

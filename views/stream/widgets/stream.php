@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Url;
 
 \humhub\modules\stream\assets\StreamAsset::register($this);

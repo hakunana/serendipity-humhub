@@ -9,7 +9,7 @@ $user = $object->content->createdBy;
 $container = $object->content->container;
 
 ?>
-<div class="panel panel-default wall_<?php echo $object->getUniqueId(); ?>">
+<div class="panel panel-default innerdivgrid col-lg-4 col-md-6 wall_<?php echo $object->getUniqueId(); ?>">
     <div class="panel-body">
         <div class="media">
             <!-- since v1.2 -->

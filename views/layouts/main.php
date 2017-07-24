@@ -76,9 +76,14 @@
 
         <?php $this->endBody() ?>
     </body>
-    <script>
+    <script type="text/javascript">
         // Reorder list of spaces in sidebar according to largest #of new entries since last visit
         $(window).load(reorder_spaces());
+
+        var element = document.getElementById('mySidenav');
+        new ResizeSensor(element, function() {
+            $('#wallStream').masonry('layout');
+        });
     </script>
     <!-- @Stefano End -->
 </html>
