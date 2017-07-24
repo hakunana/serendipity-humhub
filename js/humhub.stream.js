@@ -131,6 +131,7 @@ humhub.module('stream', function(module, require, $) {
         }).catch(function(e) {
             module.log.error(e, true);
         }).finally(function() {
+
             that.loader(false);
         });
     };
@@ -184,10 +185,16 @@ humhub.module('stream', function(module, require, $) {
             dataType: 'html',
         }).status({
             200: function(response) {
+                $('#wallStream').masonry( 'destroy' );
                 that.$.html(response.html);
                 module.log.success('success.edit');
                 that.apply();
                 that.highlight();
+
+                $('#wallStream').masonry({
+                    itemSelector : '.innerdivgrid',
+                    gutter: 10
+                });
             },
             400: function(response) {
                 that.replaceContent(response.html);
@@ -854,6 +861,9 @@ humhub.module('stream', function(module, require, $) {
         }
 
         this.$entryCache = this.getEntryNodes();
+
+        $('#wallStream').masonry('layout');
+
     };
 
     /**

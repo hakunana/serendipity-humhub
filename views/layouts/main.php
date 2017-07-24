@@ -84,6 +84,12 @@
         new ResizeSensor(element, function() {
             $('#wallStream').masonry('layout');
         });
+
+        var element2 = $('.panel-body');
+        new ResizeSensor(element2, function() {
+            $('#wallStream').masonry('layout');
+        });
+
     </script>
     <!-- @Stefano End -->
 </html>
