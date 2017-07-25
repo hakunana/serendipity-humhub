@@ -1,6 +1,21 @@
-/**do
- * Core module for managing Streams and StreamItems
- * @type Function
+/**
+ * @Stefano Start
+ * This javascript file is a "hack":
+ *  If I understand this right, this should not work. In principle by copying this file I override partially the stream module implementation.
+ *  However, as this js file is getting initialized manually in the stream.php view and this view is getting overwritten in this scheme it is working.
+ *  Note: This is not working for e.g. the comment js module, as presumably it is never initialized manually...
+ *
+ *  What has been done:
+ *  -Last action in function StreamEntry.prototype.editSubmit
+ *  and
+ *  -Within action humhub:stream:afterAddEntries
+ *      -> Masonry grid gets first destroyed then initialized. Grid needs to be destroyed first, as else new loaded items overlap each other.
+ *
+ * Also:
+ * -As last part of the WallStream.prototype.onChange function:
+ *      -> Masonry grid layout gets refreshed
+ *
+ * @Stefano End
  */
 humhub.module('stream', function(module, require, $) {
 
