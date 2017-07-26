@@ -1,3 +1,5 @@
+<!-- see mail template styling here: https://codepen.io/anon/pen/WEbJjX -->
+
 <?php
 
 use yii\helpers\Url;
@@ -15,11 +17,11 @@ use yii\helpers\Html;
         <meta name="format-detection" content="telephone=no"/>
 
         <title><?php echo Html::encode(Yii::$app->name); ?></title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,100,400,600' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Nunito" rel="stylesheet">
             <style type="text/css">
 
                 <?php $defaultBackground =  Yii::$app->view->theme->variable('background-color-main', '#fff') ?>
-                <?php $colorPrimary =  Yii::$app->view->theme->variable('primary', '#708fa0') ?>
+                <?php $colorPrimary =  Yii::$app->view->theme->variable('brandcolor', '#ff777') ?>
                 
                 .ReadMsgBody {
                     width: 100%;

@@ -18,9 +18,40 @@ i.fa.fa-bars{
     transition: 0.5s;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
     font-size: 14px;
+    
+    .topbar-brand{
+        margin-bottom: 0;
+    }
     .second-panel{
         text-align: center;
+        div#notification_widget, #icon-messages {
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            z-index: 1;
+            i{
+                margin-top: 4px;
+            }
+            .dropdown-menu{
+                width: 120px;
+            }
+        }
+        div#notification_widget{
+            margin-left: 32px;
+            margin-top: 122px;
+        }
+        #icon-messages{
+            margin-left: 2px;
+            margin-top: 122px;
+        }
+
     }
+
 }
 .sidenav .closebtn {
     // position: absolute;
@@ -38,14 +69,25 @@ i.fa.fa-bars{
 }
 .second-panel , .third-panel, .first-panel{
     display: inline-block;
+    // max-height: 20vh;
+    // overflow-y: scroll;
+}
+.activity-stream{
+    vertical-align: bottom;
+}
+.space-title{
+    background-color: @brandcolor;
+    margin: 4px;
+    text-align: center;
+    color:@white;
+    font-size: 11px;
 }
 .navbar-brand{
-    font-family: 'Roboto';
+    font-family: 'Nunito';
     font-weight: 900;
     letter-spacing: 4px;
-    
     margin-top: -20px;
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
     margin: auto;
     width: 100%;
@@ -59,15 +101,28 @@ i.fa.fa-bars{
 }
 /*TODO FIX THIS */
 
-#space-chooser {
-    margin-top: 25vh;
+.space-chooser {
+    // margin-top: 12px;
+    max-height: 20vh;
+    overflow-y: scroll;
 }
+
+.spacechooser_parent{
+
+    &:hover{
+
+    }
+}
+.recent-activities{
+    bottom:0;
+}
+/*todo set modules to bottom of nav*/
 #recent-activities{
     bottom:0;
 }
 
 .nav-pills .dropdown-menu, .nav-tabs .dropdown-menu, .account .dropdown-menu{
-    background-color: @darkslate;
+    background-color: @blue;
     i{
         color: @white;
     }
@@ -78,34 +133,33 @@ i.fa.fa-bars{
 .fa-bars{
     color:@brandcolor;
 }
-div#notification_widget {
-    z-index: 1;
-    margin-left: 22px;
-    background-color: #fff;
-    margin-top: 122px;
-    position: absolute;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
-    i{
-        margin-top: 4px;
-    }
-    .dropdown-menu{
-        width: 120px;
-    }
-}
+// div#notification_widget {
+//     z-index: 1;
+//     margin-left: 22px;
+//     background-color: #fff;
+//     margin-top: 122px;
+//     position: absolute;
+//     border: 1px solid #fff;
+//     border-radius: 50%;
+//     width: 30px;
+//     height: 30px;
+//     text-align: center;
+//     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+//     i{
+//         margin-top: 4px;
+//     }
+//     .dropdown-menu{
+//         width: 120px;
+//     }
+// }
 // .user-title img{
 //     min-width: 100px;
 //     min-height: 100px;
 //     margin: 30px;
 // }
-#user-account-image{
-    min-width: 100px;
-    min-height: 100px;
-    margin: 30px;
+.user-account-image{
+    width: 100px;   
+    height:100px;
 }
 
 .open > .dropdown-menu {
@@ -129,4 +183,15 @@ div#notification_widget {
     // #mySidenav{width: 80%!important;}
   .sidenav a {font-size: 18px;}
 
+}
+
+
+
+
+/**
+* Tabbars 
+**/
+
+.tab-menu .nav-tabs li.active>a, .tab-menu .nav-tabs li.active>a:hover{
+    border-top: 3px solid @brandcolor;
 }

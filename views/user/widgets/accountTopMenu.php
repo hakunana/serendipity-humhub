@@ -15,18 +15,18 @@ use \yii\helpers\Url;
     <ul class="nav">
         <li class="dropdown account">
             <a href="#" id="account-dropdown-link" class="dropdown-toggle" data-toggle="dropdown">
-
+                
                 <?php if ($this->context->showUserName): ?>
                     <div class="user-title hidden-xs">
-                        <img id="user-account-image" class="img-rounded"
+                        <img id="user-account-image" class="img-rounded user-account-image col-lg-12"
                          src="<?= Yii::$app->user->getIdentity()->getProfileImage()->getUrl(); ?>"
-                         height="32" width="32" alt="32x32" data-src="holder.js/32x32"
-                         style="width: 32px; height: 32px;"/>
-
-                        <strong><?= Html::encode(Yii::$app->user->getIdentity()->displayName); ?></strong><br/><span class="truncate"><?= Html::encode(Yii::$app->user->getIdentity()->profile->title); ?></span>
+                         />
+                         <div class="col-lg-12">
+                             <strong><?= Html::encode(Yii::$app->user->getIdentity()->displayName); ?></strong><br/><span class="truncate"><?= Html::encode(Yii::$app->user->getIdentity()->profile->title); ?></span>
+                        </div>
                     </div>
                 <?php endif; ?>
-
+                
 
                 <b class="caret"></b>
             </a>

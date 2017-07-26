@@ -15,6 +15,9 @@
     </head>
     <body>
         <?php $this->beginBody() ?>
+
+        <!-- TODO replace nav: https://bootsnipp.com/snippets/4OZ8R -->
+        
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="row  topbar-brand ">
@@ -23,21 +26,16 @@
                 </div>
             </div>
 
-            <div id="second-panel" class="second-panel col-lg-12 ">
+            <div id="second-panel" class="second-panel">
                 <?php
                     echo \humhub\widgets\NotificationArea::widget(['widgets' => [
                             [\humhub\modules\notification\widgets\Overview::className(), [], ['sortOrder' => 10]],
                     ]]);
                 ?>
                 <?php echo \humhub\modules\user\widgets\AccountTopMenu::widget(); ?>
-
             </div>
-            <div id="third-panel" class="third-panel ">
-                
-            </div>
-            <hr>
             <div id="space-chooser" class="space-chooser card">
-
+            <div class="space-title"> Meine Spaces </div>
                 <ul class="nav" id="top-menu-nav">
                     <!-- load space chooser widget -->
                     <?php echo \humhub\modules\space\widgets\Chooser::widget(); ?>
@@ -51,11 +49,12 @@
 
             <!-- recent_activities DIV used as container for SPACES SPECIFIC list of activities-->
             <!-- This div gets populated with according space-specific data when entering a space-->
-            <div id="recent_activities"></div>
+            <div class="activity-stream
+            <div id="recent_activities" class="recent_activities"></div>
 
             <!-- dashboard_activities DIV lists all recent activities on DASHBOARD LEVEL ONLY -->
             <!-- This div gets hidden when entering a space, as recent_activities DIV takes over -->
-            <div id="dashboard_activities">
+            <div id="dashboard_activities"> 
                 <?php
                     echo \humhub\modules\dashboard\widgets\Sidebar::widget([
                         'widgets' => [

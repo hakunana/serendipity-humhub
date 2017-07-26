@@ -16,22 +16,10 @@ $this->registerJsConfig('content.form', [
 ]]);
 ?>
 <div class="row">
-    <!-- @Stefano Start -->
-    <!--
-        Embedded search bar widget in in wall content form.
-        Changed to correct search URL '...search/search/index/&SearchForm[keyword]=' in order to redirect to dedicated search page with correct keyword as param
-    -->
-        <div id="space_search" class="nav col-md-6 nav-search">
-            <?= Html::beginForm(Url::to(['//search/search/index/']), 'GET'); ?>
-            <div class="form-group form-group-search">
-                <?= Html::textInput('SearchForm[keyword]', '', array('placeholder' => Yii::t('base', 'Search'), 'class' => 'form-control form-search', 'id' => 'search-input-field')); ?>
-                <?= Html::submitButton(Yii::t('base', 'Search'), array('class' => 'btn btn-default btn-sm form-button-search ')); ?>
-            </div>
-            <?= Html::endForm(); ?>
-        </div>
+
     <!-- @Stefano End -->
 
-    <div class="nav col-md-6" id="contentFormBody" style="display:none;" data-action-component="content.form.CreateForm" >
+    <div class="nav col-md-6 content-form" id="contentFormBody" style="display:none;" data-action-component="content.form.CreateForm" >
         <?= Html::beginForm($submitUrl, 'POST'); ?>
 
         <?= $form; ?>
@@ -111,4 +99,17 @@ $this->registerJsConfig('content.form', [
         <?php echo Html::endForm(); ?>
     </div>
     <!-- /panel body -->
+        <!-- @Stefano Start -->
+    <!--
+        Embedded search bar widget in in wall content form.
+        Changed to correct search URL '...search/search/index/&SearchForm[keyword]=' in order to redirect to dedicated search page with correct keyword as param
+    -->
+        <div id="space_search" class="nav col-md-6 nav-search">
+            <?= Html::beginForm(Url::to(['//search/search/index/']), 'GET'); ?>
+            <div class="form-group form-group-search">
+                <?= Html::textInput('SearchForm[keyword]', '', array('placeholder' => Yii::t('base', 'Search'), 'class' => 'form-control form-search', 'id' => 'search-input-field')); ?>
+                <?= Html::submitButton(Yii::t('base', 'Search'), array('class' => 'btn btn-default btn-sm form-button-search ')); ?>
+            </div>
+            <?= Html::endForm(); ?>
+        </div>
 </div> <!-- /panel -->

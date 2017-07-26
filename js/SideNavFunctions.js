@@ -1,7 +1,10 @@
 /**
  * Created by stefa on 15.07.2017.
- * extended by hannana  on 20.07.2017
+ * extended by hannanana  on 20.07.2017
  */
+
+// Source: https://bootsnipp.com/snippets/4OZ8R
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "15%";
     document.getElementById("layout-content").style.marginLeft = "15%";
@@ -11,6 +14,7 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0%";
     document.getElementById("layout-content").style.marginLeft = "0%";
 }
+
 //@Stefano Start
 
 //This function gets called whenever entering a space or entering a dashboard view (index.php / index_guest.php)
@@ -32,6 +36,10 @@ function removeActivitiesDiv(){
 //  4) If most active users module activated: moves mostactiveusers-panel out of dashboard specific list to space specific list (attach at the end of clone)
 //  5) Hides dashboard specific list
 //  6) Shows the clone (unhidden)
+// Comment @Hanna: 
+// Enhance Activities Stream by SetTimeOut function source: https://stackoverflow.com/questions/2787679/how-to-reload-page-every-5-second 
+// or via html. source: https://www.w3schools.com/tags/att_meta_http_equiv.asp
+
 function loadActivitiesDiv() {
     removeActivitiesDiv();
 
@@ -45,18 +53,16 @@ function loadActivitiesDiv() {
     $clonedActivities.show();
 }
 
-//TODO: Show only n elements, hide others?
+// TODO : Show only n elements, hide others?
 
 // Reorder list of spaces in sidebar according to largest #of new entries since last visit
 // Uses attribute update_count_value of spacechooser_parent DIV in spaceChooserItem.php for sorting
 function reorder_spaces(){
     //get list of current spaces
     var $wrapper = $('#space-menu-spaces');
-
     $wrapper.find(".spacechooser_parent").sort(function(a, b) {
         return +b.getAttribute('update_count_value') - +a.getAttribute('update_count_value');
     }).appendTo($wrapper);
-
 }
 //@Stefano End
 
