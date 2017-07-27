@@ -71,6 +71,9 @@
 .btn-default {
   background: @buttongrey;
   color: @textcolor !important;
+  i{
+    color:@textcolor;
+  }
   &:hover,
   &:focus {
     background: darken(@buttongrey, 2%);
@@ -234,5 +237,18 @@
   &:active,
   &.active {
     background: lighten(@warning, 5%) !important;
+  }
+}
+
+button.btn.btn-primary {
+    font-size: 13px;
+    line-height: 14px;
+    i{
+          font-size: 1.0rem;
+    }
+}
+.dropdown-navigation{
+  i.fa.fa-cog{
+    color: @textcolor!important;
   }
 }

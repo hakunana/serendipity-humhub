@@ -219,3 +219,129 @@
   and (orientation: landscape) {
 
 }
+
+
+
+@media (max-width:767px) {
+.second-panel div#notification_widget {
+  margin-left: -110px;
+  margin-top: -80px;
+  .second-panel div#notification_widget .dropdown-menu, .second-panel #icon-messages .dropdown-menu {
+      width: 220px;
+      
+  }
+
+
+  .dropdown-menu .btn {
+      margin: 4px;
+      font-size: 11px!important;
+  }
+}
+.content-header {
+  display: flex;
+  height: 12px;
+}
+#create-message-button {
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    padding: 3px 0;
+    height: 20px;
+    background: @brandcolor;
+}
+#space_search{
+  display: none;
+.form-group-search {
+    // position: relative;
+    // width: 196%;
+}
+}
+
+.second-panel #icon-messages {
+    margin-left: -110px;
+    margin-top: -140px;
+}
+a.active.list-group-item {
+    width: 40%;
+    text-align: center;
+    
+}
+.list-group-item{
+  border: 1px solid @backgroundgrey;
+  border-radius: 3px;
+}
+
+.controls-header {
+    text-align: left !important;
+   
+    //TODO Fix this --> isnt centered everywhere --> compare space and userprofile
+    margin-top: 50px;
+    padding: 20px 10px;
+    // padding-bottom: 10px;
+        .btn,.btn-group {
+        width:100%;
+    }
+
+}
+.panel-profile .panel-profile-header .img-profile-data {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-top: 110px;
+    color:@brandcolor;
+
+}
+.panel-profile .panel-profile-header .profile-user-photo-container {
+    position: absolute;
+    bottom: -50px;
+    margin: auto;
+    margin-left: 25%;
+}
+// TODO navigation search is behaving inconsistant on mobile so we're hiding it in this version
+.nav-search{
+  display: none;
+}
+
+// .nav-search input[type=text]:not(.browser-default) {
+//     background-color: #fff;
+//     border: 0 solid;
+//     border-radius: 3px;
+//     padding: 10px 0 10px 30px;
+//     box-shadow: 0 1px 4px #aeaeae;
+//     // width: 176%;
+//     color: #8a8e8d;
+
+// }
+  #wrapper {
+    // .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+    padding-left: 0;
+  }
+  #sidebar-wrapper {
+    #sidebar-wrapper .open>.dropdown-menu {
+        display: block;
+        overflow: visible;
+        position: relative;
+        width: 90%!important;
+        margin:10px;
+    }
+    left: 0;
+  }
+  #wrapper.active {
+    position: relative;
+    left: 250px;
+    #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+  }
+  #menu-toggle {
+    display: inline-block;
+  }
+  .inset {
+    padding: 15px;
+  }
+}
