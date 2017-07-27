@@ -1,202 +1,330 @@
-// i.fa.fa-bars{
-//     top:4px;
-//     position: fixed;
-//             background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%));
-//         -webkit-background-clip: text;
-//         -webkit-text-fill-color: transparent;
-// }
-// .sidenav {
-//     height: 100%;
-//     width: 0;
-//     position: fixed;
-//     z-index: 1;
-//     top: 0;
-//     left: 0;
-//     background-color: #fafafa;
-//     color:#333;
-//     overflow-x: hidden;
-//     transition: 0.5s;
-//     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
-//     font-size: 14px;
-    
-//     .topbar-brand{
-//         margin-bottom: 0;
-//     }
-//     .second-panel{
-//         text-align: center;
-//         div#notification_widget, #icon-messages {
-//             background-color: #fff;
-//             border: 1px solid #fff;
-//             border-radius: 50%;
-//             box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
-//             position: absolute;
-//             width: 30px;
-//             height: 30px;
-//             text-align: center;
-//             z-index: 1;
-//             i{
-//                 margin-top: 4px;
-//             }
-//             .dropdown-menu{
-//                 width: 120px;
-//             }
-//         }
-//         div#notification_widget{
-//             margin-left: 32px;
-//             margin-top: 122px;
-//         }
-//         #icon-messages{
-//             margin-left: 2px;
-//             margin-top: 122px;
-//         }
+#wrapper {
+	padding-left: 250px;
+	transition: all 0.4s ease 0s;
+}
+#sidebar-wrapper {
+	margin-left: -250px;
+	left: 250px;
+	width: 250px;
+	position: fixed;
+	height: 100%;
+	overflow-y: auto;
+	z-index: 1000;
+	transition: all 0.4s ease 0s;
+		-webkit-box-shadow: 10px 0px 35px #eee;
+	 box-shadow: 10px 0px 35px #eee;
+	.open > .dropdown-menu {
+	    display: block;
+	    // z-index: 1;
+	    overflow: visible;
+	    position: relative;
+	    width: 100%;
+	}
+}
+#wrapper.active {
+	padding-left: 0;
+	#sidebar-wrapper {
+		left: 0;
+	}
+}
+#page-content-wrapper {
+	width: 100%;
+}
+.sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 
-//     }
+}
+.content-header {
+    /* z-index: 1121; */
+    display: flex;
+}
+#menu-toggle {
+	text-decoration: none;
+}
+.toggle{
+	i{
+		font-size: 24px;
+	}
+}
 
-// }
-// .sidenav .closebtn {
-//     // position: absolute;
-//     top: 0;
-//     // right: 25px;
-//     font-size: 36px;
-//     margin-right: 20px;
-//     float: right;
-// }
-// .dropdown-menu {
-//     .btn{
-//         margin:4px;
-//         font-size: 10px;
-//     }
-// }
-// .second-panel , .third-panel, .first-panel{
-//     display: inline-block;
-//     // max-height: 20vh;
-//     // overflow-y: scroll;
-// }
-// .activity-stream{
-//     vertical-align: bottom;
-// }
-// .space-title{
-//     background-color: @brandcolor;
-//     margin: 4px;
-//     text-align: center;
-//     color:@white;
-//     font-size: 11px;
-// }
-// .navbar-brand{
-//     font-family: 'Nunito';
-//     font-weight: 900;
-//     letter-spacing: 4px;
-//     margin-top: -20px;
-//     font-size: 28px;
-//     text-align: center;
-//     margin: auto;
-//     width: 100%;
-//     &:hover{
-//         color: #ff5252;
-//     }
-//         background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%));
-//         -webkit-background-clip: text;
-//         -webkit-text-fill-color: transparent;
+.inset {
+	padding: 20px;
+}
+
+ul.sidebar-nav{
+	margin-bottom: 0;
+}
+.sidebar-nav {
+	height: 100%;
+	transition: 0.5s;
+	.panel{
+		margin-bottom: 0;
+		.panel-heading{
+			font-size: 12px;
+			background-color: #fafafa;
+		}
+	}
+	.space-acronym{
+	    padding: 1.32px 0!important;
+	}
+
+
+}
+.navbar-brand{
+    font-family: 'Nunito';
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-top: -20px;
+    font-size: 28px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    &:hover{
+        color: #ff5252;
+    }
+        background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       
+}
+.sidebar-brand{
+	padding:10px;
+}
+
+
+
+.media-list li:hover, .media-list li.selected{
+	border-left: 3px solid @brandcolor;
+}
+i.fa.fa-bars{
+    top:4px;
+    position: fixed;
+            background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+	.second-panel{
+		margin-top: 10px; 
+		.nav > li > a:hover, .nav > li > a:focus{
+			background-color: none;
+		}
+        text-align: center;
+        div#notification_widget, #icon-messages {
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            z-index: 1;
+            i{
+                margin-top: 4px;
+            }
+            .dropdown-menu{
+                width: 120px;
+            }
+        }
+        div#notification_widget{
+		    margin-left: 20px;
+		    margin-top: -100px;
+        }
+        #icon-messages{
+		    margin-left: -50px;
+		    margin-top: -110px;
+        }
+
+    }
+.dropdown-menu {
+    .btn{
+        margin:4px;
+        font-size: 10px;
+    }
+}
+.space-title{
+    background-color: @brandcolor;
+    margin: 4px;
+    text-align: center;
+    color:@white;
+    font-size: 11px;
+}
+.space-chooser, .panel-activities {
+    // margin-top: 12px;
+    border-top: 1px solid #fafafa;
+    border-bottom: 1px solid #fafafa;
+    min-height: 20vh;
+    height:300px;
+    overflow-y: hidden;
+    &:hover{
+    	overflow-y: scroll;
+    }
+}
+.activity-stream{
+    vertical-align: bottom;
+}
+.recent-activities{
+    bottom:0;
+}
+.activity-entry{
+	font-size: 12px;
+	.media-list li{
+		padding: 2px 10px;
+	}
+}
+
+.nav-pills .dropdown-menu, .nav-tabs .dropdown-menu, .account .dropdown-menu{
+    background-color: @buttongrey;
+    i{
+        color: @darkblue;
+    }
+}
+.dropdown-menu {
+    .btn{
+        margin:4px;
+        font-size: 10px;
+    }
+}
+.user-title{
+    font-size: 14px;
+}
+.user-account-image{
+    width: 100px;   
+    height:100px;
+    margin-bottom: 10px
+}
+.nav > li > a:hover, .nav > li > a:focus{
+	background-color: transparent;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+	background-color: transparent;
+}
+.nav .caret:hover, .nav .caret:active{
+	color: @brandcolor;
+}
+
+#sidebar-wrapper::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+	background-color: transparent!important;
+}
+@media (max-width:767px) {
+.second-panel div#notification_widget {
+	margin-left: -110px;
+	margin-top: -80px;
+	.second-panel div#notification_widget .dropdown-menu, .second-panel #icon-messages .dropdown-menu {
+	    width: 220px;
+	    
+	}
+
+
+	.dropdown-menu .btn {
+	    margin: 4px;
+	    font-size: 11px!important;
+	}
+}
+.content-header {
+	display: flex;
+	height: 12px;
+}
+#create-message-button {
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    padding: 3px 0;
+    height: 20px;
+    background: @brandcolor;
+}
+#space_search{
+	display: none;
+.form-group-search {
+    // position: relative;
+    // width: 196%;
+}
+}
+
+.second-panel #icon-messages {
+    margin-left: -110px;
+    margin-top: -140px;
+}
+
+.controls-header {
+    text-align: left !important;
+    margin-top: 70px;
+    padding: 20px 10px;
+    // padding-bottom: 10px;
+        .btn,.btn-group {
+        width:100%;
+    }
+
+}
+.panel-profile .panel-profile-header .img-profile-data {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-top: 110px;
+    color:@brandcolor;
+
+}
+.panel-profile .panel-profile-header .profile-user-photo-container {
+    position: absolute;
+    bottom: -50px;
+    margin: auto;
+    margin-left: 25%;
+}
+// TODO navigation search is behaving inconsistant on mobile so we're hiding it in this version
+.nav-search{
+	display: none;
+}
+
+
+// .nav-search input[type=text]:not(.browser-default) {
+//     background-color: #fff;
+//     border: 0 solid;
+//     border-radius: 3px;
+//     padding: 10px 0 10px 30px;
+//     box-shadow: 0 1px 4px #aeaeae;
+//     // width: 176%;
+//     color: #8a8e8d;
+
 // }
-// /*TODO FIX THIS */
-
-// .space-chooser {
-//     // margin-top: 12px;
-//     max-height: 20vh;
-//     overflow-y: scroll;
-// }
-
-// .spacechooser_parent{
-
-//     &:hover{
-
-//     }
-// }
-// .recent-activities{
-//     bottom:0;
-// }
-// /*todo set modules to bottom of nav*/
-// #recent-activities{
-//     bottom:0;
-// }
-
-// .nav-pills .dropdown-menu, .nav-tabs .dropdown-menu, .account .dropdown-menu{
-//     background-color: @blue;
-//     i{
-//         color: @white;
-//     }
-// }
-// .user-title{
-//     font-size: 14px;
-// }
-// .fa-bars{
-//     color:@brandcolor;
-// }
-// // div#notification_widget {
-// //     z-index: 1;
-// //     margin-left: 22px;
-// //     background-color: #fff;
-// //     margin-top: 122px;
-// //     position: absolute;
-// //     border: 1px solid #fff;
-// //     border-radius: 50%;
-// //     width: 30px;
-// //     height: 30px;
-// //     text-align: center;
-// //     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
-// //     i{
-// //         margin-top: 4px;
-// //     }
-// //     .dropdown-menu{
-// //         width: 120px;
-// //     }
-// // }
-// // .user-title img{
-// //     min-width: 100px;
-// //     min-height: 100px;
-// //     margin: 30px;
-// // }
-// .user-account-image{
-//     width: 100px;   
-//     height:100px;
-// }
-
-// .open > .dropdown-menu {
-//     display: block;
-//     /* z-index: 3; */
-//     /* overflow-x: visible; */
-//     /* position: inherit; */
-//     margin-left: -130px;
-//     max-width: 10%;
-//     font-size: 10px!important;
-// }
-
-
-// .media-list li.placeholder {
-//     font-size: 10px !important;
-//     border-bottom: none;
-// }
-
-// // //* bootstrap integration navbar
-
-// // //* end bootstrap integration navhar
-
-// // @media screen and (max-height: 450px) {
-// //   .sidenav {padding-top: 15px;
-// //     }
-// //     // #mySidenav{width: 80%!important;}
-// //   .sidenav a {font-size: 18px;}
-
-// // }
-
-
-
-
-// // /**
-// // * Tabbars 
-// // **/
-
-// // .tab-menu .nav-tabs li.active>a, .tab-menu .nav-tabs li.active>a:hover{
-// //     border-top: 3px solid @brandcolor;
-// // }
+	#wrapper {
+		// .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+		padding-left: 0;
+	}
+	#sidebar-wrapper {
+		#sidebar-wrapper .open>.dropdown-menu {
+		    display: block;
+		    overflow: visible;
+		    position: relative;
+		    width: 90%!important;
+		    margin:10px;
+		}
+		left: 0;
+	}
+	#wrapper.active {
+		position: relative;
+		left: 250px;
+		#sidebar-wrapper {
+			left: 250px;
+			width: 250px;
+			transition: all 0.4s ease 0s;
+		}
+	}
+	#menu-toggle {
+		display: inline-block;
+	}
+	.inset {
+		padding: 15px;
+	}
+}
