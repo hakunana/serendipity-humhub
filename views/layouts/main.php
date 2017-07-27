@@ -76,7 +76,7 @@
             <div class="content-header">
                 <h1 id="home">
                     <a id="menu-toggle" href="#" class=" toggle">
-                        <i class="fa fa-bars"></i>
+                        <i class="fa fa-bars" onclick="setTimeout(function() { $('#wallStream').masonry('layout'); }, 500);"></i>
                     </a>
                 </h1>
             </div>
