@@ -1,197 +1,202 @@
-i.fa.fa-bars{
-    top:4px;
-    position: fixed;
-            background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-}
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #fafafa;
-    color:#333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
-    font-size: 14px;
-    
-    .topbar-brand{
-        margin-bottom: 0;
-    }
-    .second-panel{
-        text-align: center;
-        div#notification_widget, #icon-messages {
-            background-color: #fff;
-            border: 1px solid #fff;
-            border-radius: 50%;
-            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            z-index: 1;
-            i{
-                margin-top: 4px;
-            }
-            .dropdown-menu{
-                width: 120px;
-            }
-        }
-        div#notification_widget{
-            margin-left: 32px;
-            margin-top: 122px;
-        }
-        #icon-messages{
-            margin-left: 2px;
-            margin-top: 122px;
-        }
-
-    }
-
-}
-.sidenav .closebtn {
-    // position: absolute;
-    top: 0;
-    // right: 25px;
-    font-size: 36px;
-    margin-right: 20px;
-    float: right;
-}
-.dropdown-menu {
-    .btn{
-        margin:4px;
-        font-size: 10px;
-    }
-}
-.second-panel , .third-panel, .first-panel{
-    display: inline-block;
-    // max-height: 20vh;
-    // overflow-y: scroll;
-}
-.activity-stream{
-    vertical-align: bottom;
-}
-.space-title{
-    background-color: @brandcolor;
-    margin: 4px;
-    text-align: center;
-    color:@white;
-    font-size: 11px;
-}
-.navbar-brand{
-    font-family: 'Nunito';
-    font-weight: 900;
-    letter-spacing: 4px;
-    margin-top: -20px;
-    font-size: 28px;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    &:hover{
-        color: #ff5252;
-    }
-        background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      
-}
-/*TODO FIX THIS */
-
-.space-chooser {
-    // margin-top: 12px;
-    max-height: 20vh;
-    overflow-y: scroll;
-}
-
-.spacechooser_parent{
-
-    &:hover{
-
-    }
-}
-.recent-activities{
-    bottom:0;
-}
-/*todo set modules to bottom of nav*/
-#recent-activities{
-    bottom:0;
-}
-
-.nav-pills .dropdown-menu, .nav-tabs .dropdown-menu, .account .dropdown-menu{
-    background-color: @blue;
-    i{
-        color: @white;
-    }
-}
-.user-title{
-    font-size: 14px;
-}
-.fa-bars{
-    color:@brandcolor;
-}
-// div#notification_widget {
+// i.fa.fa-bars{
+//     top:4px;
+//     position: fixed;
+//             background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%));
+//         -webkit-background-clip: text;
+//         -webkit-text-fill-color: transparent;
+// }
+// .sidenav {
+//     height: 100%;
+//     width: 0;
+//     position: fixed;
 //     z-index: 1;
-//     margin-left: 22px;
-//     background-color: #fff;
-//     margin-top: 122px;
-//     position: absolute;
-//     border: 1px solid #fff;
-//     border-radius: 50%;
-//     width: 30px;
-//     height: 30px;
-//     text-align: center;
+//     top: 0;
+//     left: 0;
+//     background-color: #fafafa;
+//     color:#333;
+//     overflow-x: hidden;
+//     transition: 0.5s;
 //     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+//     font-size: 14px;
+    
+//     .topbar-brand{
+//         margin-bottom: 0;
+//     }
+//     .second-panel{
+//         text-align: center;
+//         div#notification_widget, #icon-messages {
+//             background-color: #fff;
+//             border: 1px solid #fff;
+//             border-radius: 50%;
+//             box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+//             position: absolute;
+//             width: 30px;
+//             height: 30px;
+//             text-align: center;
+//             z-index: 1;
+//             i{
+//                 margin-top: 4px;
+//             }
+//             .dropdown-menu{
+//                 width: 120px;
+//             }
+//         }
+//         div#notification_widget{
+//             margin-left: 32px;
+//             margin-top: 122px;
+//         }
+//         #icon-messages{
+//             margin-left: 2px;
+//             margin-top: 122px;
+//         }
+
+//     }
+
+// }
+// .sidenav .closebtn {
+//     // position: absolute;
+//     top: 0;
+//     // right: 25px;
+//     font-size: 36px;
+//     margin-right: 20px;
+//     float: right;
+// }
+// .dropdown-menu {
+//     .btn{
+//         margin:4px;
+//         font-size: 10px;
+//     }
+// }
+// .second-panel , .third-panel, .first-panel{
+//     display: inline-block;
+//     // max-height: 20vh;
+//     // overflow-y: scroll;
+// }
+// .activity-stream{
+//     vertical-align: bottom;
+// }
+// .space-title{
+//     background-color: @brandcolor;
+//     margin: 4px;
+//     text-align: center;
+//     color:@white;
+//     font-size: 11px;
+// }
+// .navbar-brand{
+//     font-family: 'Nunito';
+//     font-weight: 900;
+//     letter-spacing: 4px;
+//     margin-top: -20px;
+//     font-size: 28px;
+//     text-align: center;
+//     margin: auto;
+//     width: 100%;
+//     &:hover{
+//         color: #ff5252;
+//     }
+//         background: -webkit-linear-gradient(@brandcolor, lighten(@brandcolor, 20%));
+//         -webkit-background-clip: text;
+//         -webkit-text-fill-color: transparent;
+      
+// }
+// /*TODO FIX THIS */
+
+// .space-chooser {
+//     // margin-top: 12px;
+//     max-height: 20vh;
+//     overflow-y: scroll;
+// }
+
+// .spacechooser_parent{
+
+//     &:hover{
+
+//     }
+// }
+// .recent-activities{
+//     bottom:0;
+// }
+// /*todo set modules to bottom of nav*/
+// #recent-activities{
+//     bottom:0;
+// }
+
+// .nav-pills .dropdown-menu, .nav-tabs .dropdown-menu, .account .dropdown-menu{
+//     background-color: @blue;
 //     i{
-//         margin-top: 4px;
-//     }
-//     .dropdown-menu{
-//         width: 120px;
+//         color: @white;
 //     }
 // }
-// .user-title img{
-//     min-width: 100px;
-//     min-height: 100px;
-//     margin: 30px;
+// .user-title{
+//     font-size: 14px;
 // }
-.user-account-image{
-    width: 100px;   
-    height:100px;
-}
+// .fa-bars{
+//     color:@brandcolor;
+// }
+// // div#notification_widget {
+// //     z-index: 1;
+// //     margin-left: 22px;
+// //     background-color: #fff;
+// //     margin-top: 122px;
+// //     position: absolute;
+// //     border: 1px solid #fff;
+// //     border-radius: 50%;
+// //     width: 30px;
+// //     height: 30px;
+// //     text-align: center;
+// //     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+// //     i{
+// //         margin-top: 4px;
+// //     }
+// //     .dropdown-menu{
+// //         width: 120px;
+// //     }
+// // }
+// // .user-title img{
+// //     min-width: 100px;
+// //     min-height: 100px;
+// //     margin: 30px;
+// // }
+// .user-account-image{
+//     width: 100px;   
+//     height:100px;
+// }
 
-.open > .dropdown-menu {
-    display: block;
-    /* z-index: 3; */
-    /* overflow-x: visible; */
-    /* position: inherit; */
-    margin-left: -130px;
-    max-width: 10%;
-    font-size: 10px!important;
-}
+// .open > .dropdown-menu {
+//     display: block;
+//     /* z-index: 3; */
+//     /* overflow-x: visible; */
+//     /* position: inherit; */
+//     margin-left: -130px;
+//     max-width: 10%;
+//     font-size: 10px!important;
+// }
 
 
-.media-list li.placeholder {
-    font-size: 10px !important;
-    border-bottom: none;
-}
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;
-    }
-    // #mySidenav{width: 80%!important;}
-  .sidenav a {font-size: 18px;}
+// .media-list li.placeholder {
+//     font-size: 10px !important;
+//     border-bottom: none;
+// }
 
-}
+// // //* bootstrap integration navbar
+
+// // //* end bootstrap integration navhar
+
+// // @media screen and (max-height: 450px) {
+// //   .sidenav {padding-top: 15px;
+// //     }
+// //     // #mySidenav{width: 80%!important;}
+// //   .sidenav a {font-size: 18px;}
+
+// // }
 
 
 
 
-/**
-* Tabbars 
-**/
+// // /**
+// // * Tabbars 
+// // **/
 
-.tab-menu .nav-tabs li.active>a, .tab-menu .nav-tabs li.active>a:hover{
-    border-top: 3px solid @brandcolor;
-}
+// // .tab-menu .nav-tabs li.active>a, .tab-menu .nav-tabs li.active>a:hover{
+// //     border-top: 3px solid @brandcolor;
+// // }

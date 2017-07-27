@@ -25,7 +25,7 @@ use humhub\modules\search\models\forms\SearchForm;
     <div class = "row">
 
         <div id="index_search" class="nav col-md-offset-3 col-md-6 nav-search" style="display: none">
-            <i class="fa fa-search" aria-hidden="true"></i>
+            
             <?= Html::beginForm(Url::to(['//search/search/index/']), 'GET'); ?>
             <div class="form-group form-group-search">
                 <?= Html::textInput('SearchForm[keyword]', '', array('placeholder' => Yii::t('base', 'Search'), 'class' => 'form-control form-search', 'id' => 'search-input-field')); ?>

@@ -2,18 +2,21 @@
  * Created by stefa on 15.07.2017.
  * extended by hannanana  on 20.07.2017
  */
+function togglMenu(){    
+    /*Menu-toggle*/
 
+}
 // Source: https://bootsnipp.com/snippets/4OZ8R
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "15%";
-    document.getElementById("layout-content").style.marginLeft = "15%";
-}
+// function openNav() {
+//     document.getElementById("mySidenav").style.width = "15%";
+//     document.getElementById("layout-content").style.marginLeft = "15%";
+// }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0%";
-    document.getElementById("layout-content").style.marginLeft = "0%";
-}
+// function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0%";
+//     document.getElementById("layout-content").style.marginLeft = "0%";
+// }
 
 //@Stefano Start
 

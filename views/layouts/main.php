@@ -14,67 +14,103 @@
         <?= $this->render('head'); ?>
     </head>
     <body>
-        <?php $this->beginBody() ?>
+        <div id="wrapper">
+            <?php $this->beginBody() ?>
 
-        <!-- TODO replace nav: https://bootsnipp.com/snippets/4OZ8R -->
-        
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="row  topbar-brand ">
-                <div class="col-lg-12 hidden-xs">
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    
+                    <li class="sidebar-brand">
+                        <a href="#" id="site-brand" >
                             <?php echo \humhub\widgets\SiteLogo::widget(); ?>
-                </div>
-            </div>
-
-            <div id="second-panel" class="second-panel">
+                        </a>
+                    </li>
+                    <li class="second-panel">
+                        
+                <?php echo \humhub\modules\user\widgets\AccountTopMenu::widget(); ?>
                 <?php
                     echo \humhub\widgets\NotificationArea::widget(['widgets' => [
                             [\humhub\modules\notification\widgets\Overview::className(), [], ['sortOrder' => 10]],
                     ]]);
                 ?>
-                <?php echo \humhub\modules\user\widgets\AccountTopMenu::widget(); ?>
+                    </li>
+
+                    <li>
+                        <div id="space-chooser" class="space-chooser panel">
+                        <div class="panel-heading"> Meine Spaces </div>
+                            <ul class="nav" id="top-menu-nav">
+                                <!-- load space chooser widget -->
+                                <?php echo \humhub\modules\space\widgets\Chooser::widget(); ?>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                                <div class="activity-stream">
+                    <div id="recent_activities" class="recent_activities"></div>
+
+                    <!-- dashboard_activities DIV lists all recent activities on DASHBOARD LEVEL ONLY -->
+                    <!-- This div gets hidden when entering a space, as recent_activities DIV takes over -->
+                    <div id="dashboard_activities"> 
+                        <?php
+                            echo \humhub\modules\dashboard\widgets\Sidebar::widget([
+                                'widgets' => [
+                                    [\humhub\modules\activity\widgets\Stream::className(),
+                                        ['streamAction' => '/dashboard/dashboard/stream'],
+                                        ['sortOrder' => 150]
+                                    ]
+                                ]
+                            ]);
+                        ?>
+                    </div>
+                    <!-- END TODO REFACTORING -->
+                    </div>
+                    </li>
+            </ul>
             </div>
-            <div id="space-chooser" class="space-chooser card">
-            <div class="space-title"> Meine Spaces </div>
-                <ul class="nav" id="top-menu-nav">
-                    <!-- load space chooser widget -->
-                    <?php echo \humhub\modules\space\widgets\Chooser::widget(); ?>
 
-                </ul>
+
+
+
+            <div id="page-content-wrapper">
+            <div class="content-header">
+                <h1 id="home">
+                    <a id="menu-toggle" href="#" class=" toggle">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </h1>
             </div>
-
-            <!-- @Stefano Start -->
-
-            <!-- START TODO REFACTORING: Following logic should be externalized in controller -->
-
-            <!-- recent_activities DIV used as container for SPACES SPECIFIC list of activities-->
-            <!-- This div gets populated with according space-specific data when entering a space-->
-            <div class="activity-stream
-            <div id="recent_activities" class="recent_activities"></div>
-
-            <!-- dashboard_activities DIV lists all recent activities on DASHBOARD LEVEL ONLY -->
-            <!-- This div gets hidden when entering a space, as recent_activities DIV takes over -->
-            <div id="dashboard_activities"> 
-                <?php
-                    echo \humhub\modules\dashboard\widgets\Sidebar::widget([
-                        'widgets' => [
-                            [\humhub\modules\activity\widgets\Stream::className(),
-                                ['streamAction' => '/dashboard/dashboard/stream'],
-                                ['sortOrder' => 150]
-                            ]
-                        ]
-                    ]);
-                ?>
+            <?= $content; ?>
             </div>
-            <!-- END TODO REFACTORING -->
-
+            <?php $this->endBody() ?>
         </div>
-
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
-        <?= $content; ?>
-
-        <?php $this->endBody() ?>
     </body>
+    <script>
+    
+    /*Menu-toggle*/
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
+
+    /*Scroll Spy*/
+    $('body').scrollspy({ target: '#spy', offset:80});
+
+    /*Smooth link animation*/
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+    </script>
     <script type="text/javascript">
         // Reorder list of spaces in sidebar according to largest #of new entries since last visit
         $(window).load(reorder_spaces());
@@ -118,6 +154,9 @@
         Until then, there are just workarounds to solve various issues, e.g. via triggering the masonry-layout function onclick()
            but delaying it for a couple of seconds so the page can first reload the section before the grid gets refreshed.
          */
+    </script>
+    <script type="text/javascript">
+        
     </script>
     <!-- @Stefano End -->
 </html>

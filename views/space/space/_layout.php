@@ -6,7 +6,7 @@
 
 $space = $this->context->contentContainer;
 ?>
-<div class="container space-layout-container">
+<div class="container-fluid space-layout-container">
     <div class="row">
         <div class="col-md-12">
             <?php echo humhub\modules\space\widgets\Header::widget(['space' => $space]); ?>

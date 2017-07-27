@@ -15,10 +15,10 @@ use \yii\helpers\Url;
     <ul class="nav">
         <li class="dropdown account">
             <a href="#" id="account-dropdown-link" class="dropdown-toggle" data-toggle="dropdown">
-                
+
                 <?php if ($this->context->showUserName): ?>
-                    <div class="user-title hidden-xs">
-                        <img id="user-account-image" class="img-rounded user-account-image col-lg-12"
+                    <div class="user-title">
+                        <img id="user-account-image" class="img-rounded user-account-image" style="width: 100px; height: 100px;"
                          src="<?= Yii::$app->user->getIdentity()->getProfileImage()->getUrl(); ?>"
                          />
                          <div class="col-lg-12">
@@ -26,11 +26,11 @@ use \yii\helpers\Url;
                         </div>
                     </div>
                 <?php endif; ?>
-                
+
 
                 <b class="caret"></b>
             </a>
-            <ul class="dropdown-menu pull-right">
+            <ul class="dropdown-menu pull-left">
                 <?php foreach ($this->context->getItems() as $item): ?>
                     <?php if ($item['label'] == '---'): ?>
                         <li class="divider"></li>
