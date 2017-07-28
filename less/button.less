@@ -1,5 +1,6 @@
 //
-// Buttons
+//' Hanna Changes ' //
+// Buttons enhancements  
 // --------------------------------------------------
 .btn {
   float: none;
@@ -44,7 +45,7 @@
 .nav-search {
   .form-group-search .form-button-search {
        top: 14px;
-  right: 25px; 
+  // right: 25px; 
   }
 }
 .input.btn {
@@ -129,26 +130,26 @@
 }
 
 .btn-info {
-  background: @info;
+  background: @blue;
   color: @text-color-contrast !important;
   &:hover,
   &:focus {
-    background: darken(@info, 5%) !important;
+    background: darken(@blue, 5%) !important;
     text-decoration: none;
   }
   &:active,
   &.active {
     outline: 0;
-    background: darken(@info, 5%);
+    background: darken(@blue, 5%);
   }
 }
 
 .btn-info[disabled],
 .btn-info.disabled {
-  background: lighten(@info, 5%);
+  background: lighten(@blue, 5%);
   &:hover,
   &:focus {
-    background: lighten(@info, 5%);
+    background: lighten(@blue, 5%);
   }
   &:active,
   &.active {
@@ -240,6 +241,9 @@
   }
 }
 
+
+/* serendipity specific btn adjustments */
+
 button.btn.btn-primary {
     font-size: 13px;
     line-height: 14px;
@@ -251,4 +255,32 @@ button.btn.btn-primary {
   i.fa.fa-cog{
     color: @textcolor!important;
   }
+}
+.image-upload-container{
+  .btn-sm {
+      padding: 0 4px;
+      font-size: 12px;
+  }
+
+}
+.profile-user-photo-container{
+  .image-upload-buttons {
+
+    right: 30px;
+    
+}
+}
+#create-message-button {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    padding: 2px 9px;
+    height: 19px;
+    font-size: 11px!important;
+}
+.dropdown-menu .btn {
+    margin: 0px;
+    font-size: 12!important;
+    height:24px;
+    line-height: 22px;
 }

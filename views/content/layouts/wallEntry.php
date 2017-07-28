@@ -11,12 +11,12 @@
  */
 ?>
 <?php
-//@Stefano start
+//@stefano changes start
 // wall-entry DIV acts as a container for a single wall entry tile
 // added class innerdivgrid for css formatting purposes
 $cssClass = ($entry->pinned) ? 'wall-entry pinned-entry' : 'wall-entry';
 $isActivity = $entry->object_model == humhub\modules\activity\models\Activity::className();
-//@Stefano end
+//@stefano changes end
 ?>
 
 <?php if (!$isActivity) : ?>

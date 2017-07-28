@@ -72,13 +72,13 @@ $this->registerJsVar('defaultStreamSort', ($defaultStreamSort != '') ? $defaultS
         <div class="back_button_holder" style="display:none">
             <a href="#" class="singleBackLink btn btn-primary"><?php echo Yii::t('ContentModule.widgets_views_stream', 'Back to stream'); ?></a><br><br>
         </div>
-        <!-- @Stefano Start -->
+        <!-- @stefano changes Start -->
         <!--
             added class outerdivgrid for css formatting purposes
             outerdivgrid represents the container of all items (postings) of the space
         -->
         <div class="s2_streamContent outerdivgrid" data-stream-content></div>
-        <!-- @Stefano End -->
+        <!-- @stefano changes End -->
         <div class="emptyStreamMessage" style="display:none;">
             <div class="<?php echo $this->context->messageStreamEmptyCss; ?>">
                 <div class="panel">

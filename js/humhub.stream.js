@@ -1,5 +1,5 @@
 /**
- * @Stefano Start
+ * @stefano changes Start
  * This javascript file is a "hack":
  *  If I understand this right, this should not work. In principle by copying this file I override partially the stream module implementation.
  *  However, as this js file is getting initialized manually in the stream.php view and this view is getting overwritten in this scheme it is working.
@@ -15,7 +15,7 @@
  * -As last part of the WallStream.prototype.onChange function:
  *      -> Masonry grid layout gets refreshed
  *
- * @Stefano End
+ * @stefano changes End
  */
 humhub.module('stream', function(module, require, $) {
 

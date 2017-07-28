@@ -17,7 +17,7 @@ $this->registerJsConfig('content.form', [
 ?>
 <div class="row">
 
-    <!-- @Stefano End -->
+    <!-- @stefano changes End -->
 
     <div class="nav col-md-6 content-form" id="contentFormBody" style="display:none;" data-action-component="content.form.CreateForm" >
         <?= Html::beginForm($submitUrl, 'POST'); ?>
@@ -99,7 +99,7 @@ $this->registerJsConfig('content.form', [
         <?php echo Html::endForm(); ?>
     </div>
     <!-- /panel body -->
-        <!-- @Stefano Start -->
+        <!-- @stefano changes Start -->
     <!--
         Embedded search bar widget in in wall content form.
         Changed to correct search URL '...search/search/index/&SearchForm[keyword]=' in order to redirect to dedicated search page with correct keyword as param

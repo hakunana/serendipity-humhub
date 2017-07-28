@@ -4,7 +4,7 @@
 use yii\helpers\Html;
 use humhub\libs\Helpers;
 ?>
-<!-- @Stefano Start -->
+<!-- @stefano changes Start -->
 <!--
     1) Added attribute update_count_value for JScript reorder_spaces function
     2) Added class="spacechooser_parent" for JScript reorder_spaces function
@@ -47,7 +47,7 @@ use humhub\libs\Helpers;
                 <br/>
                     <p><?php echo Html::encode(Helpers::truncateText($space->description, 60)); ?></p>
                 </div>
-            <!-- @Stefano End -->
+            <!-- @stefano changes End -->
             </div>
         </div>
     </a>

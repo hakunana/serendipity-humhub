@@ -25,7 +25,7 @@ $this->registerJsConfig('space.chooser', [
     <ul>
         <li class="divider"></li>
         <li>
-            <!-- @Stefano Start -->
+            <!-- @stefano changes Start -->
             <!--
                 Added id="space-menu-spaces" to DIV as a reference point for JScript reorder_spaces function
             -->
@@ -38,7 +38,7 @@ $this->registerJsConfig('space.chooser', [
                     <?= SpaceChooserItem::widget(['space' => $followSpace, 'isFollowing' => true]); ?>
                 <?php endforeach; ?>
             </ul>
-            <!-- @Stefano End -->
+            <!-- @stefano changes End -->
         </li>
 
         <?php if ($canCreateSpace): ?>

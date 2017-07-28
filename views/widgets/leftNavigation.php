@@ -1,3 +1,5 @@
+
+<!-- hanna changes add classes for styling -->
 <?php
 use humhub\modules\content\components\ContentContainerController;
 use humhub\modules\space\models\Space;

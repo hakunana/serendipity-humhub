@@ -51,6 +51,9 @@ if ($space->isAdmin()) {
 
             <?php } ?>
 
+            <!-- TODO: Add Link to Space via js: <a href="javascript:history.back()"></a>  
+            current Problem: From space settings you cant go back -->
+
             <!-- show user name and title -->
             <div class="img-profile-data">
                 <h1 class="space"><?php echo Html::encode($space->name); ?></h1>
@@ -92,7 +95,7 @@ if ($space->isAdmin()) {
 
             <?php } ?>
         </div>
-
+        
         <div class="image-upload-container profile-user-photo-container" style="width: 140px; height: 140px;">
 
             <?php if ($space->profileImage->hasImage()) : ?>
@@ -151,7 +154,7 @@ if ($space->isAdmin()) {
             <?php endif; ?>
 
         </div>
-
+        
     </div>
 
     <div class="controls controls-header pull-right">
@@ -172,7 +175,7 @@ if ($space->isAdmin()) {
                 ['sortOrder' => 30]]
         ]]);
         ?>
-        <!-- @Stefano Start -->
+        <!-- @stefano changes Start -->
         <!-- Changed button to dropdown by calling dropdown template -->
         <?=
         humhub\modules\space\widgets\HeaderControlsMenu::widget([
@@ -180,7 +183,7 @@ if ($space->isAdmin()) {
             'template' => '@humhub/widgets/views/dropdownNavigation'
         ]);
         ?>
-        <!-- @Stefano End -->
+        <!-- @stefano changes End -->
     </div>
 
     <div class="row"></div>

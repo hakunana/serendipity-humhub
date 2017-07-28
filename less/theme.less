@@ -1,4 +1,5 @@
 /**
+// Hanna Changes //
  * Define or overwrite your theme selectors within this file.
 **/
 
@@ -28,4 +29,33 @@ h5{
 /* ---- settings ---- */
 a.list-group-item:hover, a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus{
   border-left: 3px solid @brandcolor !important;
+}
+/* fix modal issue through materialize implementation */ 
+.modal{
+  background-color: transparent!important;
+  max-height: 100%;
+  box-shadow: none;
+}
+.input-group-addon{
+  background-color: none;
+}
+.media-body{
+  transition: all ease 2.5s;
+  &:hover{transition: all ease 2.5s}
+}
+div#spacechooser_desc{
+  transition: all ease 2.5s;
+  &:hover{transition: all ease 2.5s};
+}
+#space-menu-spaces [data-space-chooser-item] {
+    transition: all ease 2.5s;
+  &:hover{transition: all ease 2.5s};
+}
+.spacechooser_parent{
+      transition: all ease 2.5s;
+  &:hover{transition: all ease 2.5s};
+}
+#space-menu-spaces{
+      transition: all ease 2.5s;
+  &:hover{transition: all ease 2.5s};
 }

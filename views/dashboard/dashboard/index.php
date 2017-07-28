@@ -8,7 +8,7 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 use humhub\modules\search\models\forms\SearchForm;
 ?>
-<!-- @Stefano Start -->
+<!-- @stefano changes Start -->
 <script>
     if(!document.getElementById("#space_search"))
     {
@@ -18,7 +18,7 @@ use humhub\modules\search\models\forms\SearchForm;
     // reset navbar activities container to dashboard level
     removeActivitiesDiv();
 </script>
-<!-- @Stefano End -->
+<!-- @stefano changes End -->
 <div class="container">
     <!-- START: new search form-->
 

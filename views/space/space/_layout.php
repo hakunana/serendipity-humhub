@@ -24,7 +24,7 @@ $space = $this->context->contentContainer;
         </div>
 
     </div>
-    <!-- @Stefano Start -->
+    <!-- @stefano changes Start -->
     <!--
         sidenav_content_hidden DIV calls space specific content data such as activities for example.
         sidenav_content_hidden DIV gets cloned into main.php -> recent_activities DIV.
@@ -45,5 +45,5 @@ $space = $this->context->contentContainer;
         //Load space specific activities list from sidenav_content_hidden DIV
         loadActivitiesDiv();
     </script>
-    <!-- @Stefano End -->
+    <!-- @stefano changes End -->
 </div>

@@ -18,7 +18,7 @@ function togglMenu(){
 //     document.getElementById("layout-content").style.marginLeft = "0%";
 // }
 
-//@Stefano Start
+//@stefano changes Start
 
 //This function gets called whenever entering a space or entering a dashboard view (index.php / index_guest.php)
 //This function:
@@ -67,5 +67,5 @@ function reorder_spaces(){
         return +b.getAttribute('update_count_value') - +a.getAttribute('update_count_value');
     }).appendTo($wrapper);
 }
-//@Stefano End
+//@stefano changes End
 

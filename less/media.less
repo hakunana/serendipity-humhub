@@ -1,3 +1,6 @@
+//* This Document contaings mediaqueries for most common current mobile devices *//
+//' Hanna Changes ' //
+
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
@@ -223,12 +226,18 @@
 
 
 @media (max-width:767px) {
+  i.fa.fa-bars{
+    z-index: 2;
+    background-color: #fff;
+  }
+ul.sidebar-nav{
+  background-color: #fff;
+}
 .second-panel div#notification_widget {
   margin-left: -110px;
   margin-top: -80px;
   .second-panel div#notification_widget .dropdown-menu, .second-panel #icon-messages .dropdown-menu {
       width: 220px;
-      
   }
 
 
@@ -343,5 +352,10 @@ a.active.list-group-item {
   }
   .inset {
     padding: 15px;
+  }
+}
+@media only screen and (min-width: 993px){
+  .container {
+  width: 80%;
   }
 }

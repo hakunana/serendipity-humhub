@@ -6,7 +6,7 @@
 use humhub\libs\Html;
 use yii\helpers\Url;
 ?>
-<!-- @Stefano Start -->
+<!-- @stefano changes Start -->
 <script>
     if(!document.getElementById("#space_search"))
     {
@@ -17,7 +17,7 @@ use yii\helpers\Url;
     removeActivitiesDiv();
 
 </script>
-<!-- @Stefano End -->
+<!-- @stefano changes End -->
 <div class="container">
     <!-- START: new search form-->
 
