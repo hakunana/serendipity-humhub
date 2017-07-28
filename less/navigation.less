@@ -153,7 +153,7 @@ i.fa.fa-bars{
     }
 }
 .nav-pills .dropdown-menu li a, .nav-tabs .dropdown-menu li a, .account .dropdown-menu li a{
-	color:@textcolor;
+	color:@darkblue;
 }
 .space-title{
     background-color: @brandcolor;
@@ -193,15 +193,26 @@ i.fa.fa-bars{
 }
 
 .nav-pills .dropdown-menu, .nav-tabs .dropdown-menu, .account .dropdown-menu{
-    background-color: @backgroundgrey;
+    background-color: #eee;
     i{
         color: @darkblue;
     }
     a{
-    	color:textgrey;
+    	color:@darkblue;
     	font-weight: 400;
 
     }
+    .divider{
+            background-color: #ddd;
+    }
+}
+.nav-pills .dropdown-menu li.divider, .nav-tabs .dropdown-menu li.divider, .account .dropdown-menu li.divider{
+    background-color: #ddd;
+}
+.nav-pills .dropdown-menu li:hover, .nav-tabs .dropdown-menu li:hover, .account .dropdown-menu li:hover, .nav-pills .dropdown-menu li.selected, .nav-tabs .dropdown-menu li.selected, .account .dropdown-menu li.selected{
+        border-left: 3px solid @darkblue;
+    color: @darkblue !important;
+    background-color: #fafafa !important;
 }
 .dropdown-menu {
     .btn{
